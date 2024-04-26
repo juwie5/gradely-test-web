@@ -1,6 +1,5 @@
 <template>
     <UCarousel v-slot="{ item }" :items="items" arrows>
-        <!-- <img :src="item" width="300" height="400" draggable="false"> -->
         <div class="rounded-[10px]  cursor-pointer w-[90%] flex flex-col justify-between" :class="[parents ? 'border border-[#E5E5E5] p-4' : 'border-none p-2 w-full']" @click="showModal(item)">
             <div class="relative">
                 <div class="absolute left-[40%] right-[50%] top-[38%] bottom-[50%]">
@@ -12,7 +11,7 @@
                         </svg>
                     </span>
                 </div>
-                <NuxtImg :src="`${item.thumbnail}`" class="rounded-[15px] object-fit h-40 w-72 hover:bg-[rgba(0, 0, 0, 0.5)]" />
+                <img :src="`${item.thumbnail}`" class="rounded-[15px] object-fit h-40 w-72 hover:bg-[rgba(0, 0, 0, 0.5)]" />
             </div>
             <div v-if="parents" class="mt-2">
                 <h4 class="uppercase text-[#11BDCF] text-xs font-bold">{{ item.subject }}</h4>

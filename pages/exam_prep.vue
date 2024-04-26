@@ -160,7 +160,7 @@
   import { urls } from "~/assets/urls";
   import type { Testimony } from "~/components/home/testimonies.vue";
   import type { Faq } from "~/components/ui/faq.vue";
-  import slider from "~/components/home/slider.vue"
+  import slider from "~/components/home/slider.vue";
   
   const faqs: Faq[] = [
     {
