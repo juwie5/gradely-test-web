@@ -1,6 +1,10 @@
 export const urls = {
   home: "/",
   parents:"parents",
+  exams:"exam_prep",
+  schools:"schools",
+  tutoring: "tutoring",
+  summer_school: "summer",
   about_gradely: "https://gradely.ng/about",
   blog: "https://gradely.ng/blog",
   login: "https://app.gradely.co/auth/login",
@@ -10,7 +14,6 @@ export const urls = {
   for_schools: "https://gradely.co/for-schools/",
   for_parents: "https://gradely.ng/pages/tutoring",
   for_teachers: "https://app.gradely.co/auth/signup-teacher",
-  tutoring: "https://gradely.ng/tutoring",
   learn: "",
   contact_us: "https://gradely.ng/contact-us",
   help_center: "https://gradely.ng/help-centre",
@@ -26,4 +29,7 @@ export const urls = {
   twitter: "https://www.twitter.com/gradelyng",
   youtube: "https://www.youtube.com/channel/UCsiHe1Qm8SZ_8LD5zkEY1Rw/",
   linked_in: "https://www.linkedin.com/company/gradelyng/about/",
+  play_store: "https://play.google.com/store/apps/details?id=co.gradely.student&pli=1",
+  apple_store:"https://apps.apple.com/ng/app/gradely-for-students/id1610383795",
+  book_counseling:"https://calendly.com/gradelysupport/gradely-free-trial-class"
 };

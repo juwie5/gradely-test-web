@@ -1,9 +1,9 @@
 <template>
     <div class="w-full relative bg-local bg-no-repeat bg-contain bg-[#FEF7ED]"
       style="background-image: url('/img/bgWave.png');">
-      <div class="container mb-16">
+      <div class="container pt-8">
         <div class="grid lg:grid-cols-2 w-full">
-          <div class="my-16">
+          <div class="mt-16">
             <h2
               class="text-3xl xl:text-5xl lg:w-full text-[#113255] xl:leading-[65.38px]  tracking-tight font-bold mb-5 text-balance">
               Master difficult topics. <br></br> 
@@ -18,8 +18,7 @@
             </div>
           </div>
           <div class="flex items-center mt-9">
-           <NuxtImg src="/img/parent-hero.png" fit="inside"/>
-            
+           <NuxtImg src="/img/parent-hero.png" fit="inside"/>  
           </div>
         </div>
       </div>

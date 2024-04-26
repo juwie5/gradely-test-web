@@ -1,24 +1,24 @@
 <template>
   <main class="bg-[#FDFAFA] font-noto relative overflow-hidden">
-    <div aria-hidden class="bg-local bg-no-repeat bg-contain absolute top-[580px] right-0 w-[520px] h-[520px]"
+    <div aria-hidden class="bg-local bg-no-repeat bg-contain absolute top-[580px] right-0 w-[520px] h-[520px] pointer-events-none"
       style="background-image: url('/img/ellipse-4.svg'); background-position: top right;" />
-    <div aria-hidden class="bg-local bg-no-repeat bg-contain absolute top-[900px] left-0 w-[520px] h-[520px]"
+    <div aria-hidden class="bg-local bg-no-repeat bg-contain absolute top-[900px] left-0 w-[520px] h-[520px] pointer-events-none"
       style="background-image: url('/img/ellipse-1.svg'); background-position: top left;" />
-    <div aria-hidden class="bg-local bg-no-repeat bg-contain absolute top-[2000px] right-0 w-[520px] h-[520px]"
+    <div aria-hidden class="bg-local bg-no-repeat bg-contain absolute top-[2000px] right-0 w-[520px] h-[520px] pointer-events-none"
       style="background-image: url('/img/ellipse-2.svg'); background-position: top right;" />
-    <div aria-hidden class="bg-local bg-no-repeat bg-contain absolute top-[3000px] left-0 w-[520px] h-[520px]"
+    <div aria-hidden class="bg-local bg-no-repeat bg-contain absolute top-[3000px] left-0 w-[520px] h-[520px] pointer-events-none"
       style="background-image: url('/img/ellipse-3.svg'); background-position: top left;" />
-    <div aria-hidden class="bg-local bg-no-repeat bg-contain absolute top-[3700px] right-0 w-[520px] h-[520px]"
+    <div aria-hidden class="bg-local bg-no-repeat bg-contain absolute top-[3700px] right-0 w-[520px] h-[520px] pointer-events-none"
       style="background-image: url('/img/ellipse-4.svg'); background-position: top right;" />
     <HomeNavbar/>
     <HomeHero />
     <section class="container text-center my-16">
-      <div class="flex justify-between items-center overflow-x-auto gap-4">
-        <img src="assets/icons/techcabal.svg" />
-        <img src="assets/icons/techpoint.svg" />
-        <img src="assets/icons/techcrunch.svg" />
-        <img src="assets/icons/bbc.svg" />
-        <img src="assets/icons/cnn.svg" />
+      <div class="w-full flex gap-16 custom-scrollbar overflow-x-auto justify-center">
+        <img class="w-42" src="assets/icons/techcabal.svg" />
+        <img  class="w-42" src="assets/icons/techpoint.svg" />
+        <img  class="w-42" src="assets/icons/techcrunch.svg" />
+        <img  class="w-42" src="assets/icons/bbc.svg" />
+        <img class="w-42" src="assets/icons/cnn.svg" />
       </div>
       <div class="mt-20">
         <h3 class="text-5xl mb-4 font-bold tracking-tighter text-[#113255]">
@@ -74,31 +74,31 @@
           </div>
         </div>
       </div>
-      <div class="mt-8">
-        <button class="border border-[#D5D5D5] rounded-[35px] py-[15px] px-8 hover:bg-[#dbf5f8] hover:border-none hover:shadow-lg hover:shadow-slate-400/50">
-          <div class="flex items-center gap-2 ">
+      <div class="flex justify-center mt-8">
+        <NuxtLink :to="urls.book_counseling" class="border border-[#D5D5D5] rounded-[35px] py-[15px] px-8 hover:bg-[#dbf5f8] hover:border-transparent hover:shadow-lg hover:shadow-slate-400/50">
+          <div class="flex items-center gap-2">
             <p class="text-[#113255] hover:text-[#113255] font-bold text-sm">BOOK A FREE COUNSELLING SESSION</p>
             <img src="../assets/icons/arrow-right-up-line.svg" alt="">
           </div>
-        </button>
+        </NuxtLink>
       </div>
     </section>
     <section class="container mt-8">
       <UiImageTextBlock color="#FCEACF" direction="left" label="for parents" 
         image-url="/img/for-parents.png"
-        :learn="true"
+        :learn="urls.parents"
         text="Help them use Gradely to gain mastery of difficult subject topics by daily practice on recommended tests, video lessons and tutor sessions anywhere, anytime." />
       <UiImageTextBlock color="#FFDCDE" direction="right" label="For Schools" 
         image-url="/img/for-schools.png"
-        :learn="true"
+        :learn="urls.schools"
         text="Make your schooling more efficient with the best free tools and content in one Learning Management System (LMS), online or offline." />
       <UiImageTextBlock color="#DBF5F8" direction="left" label="For Teachers" 
       image-url="/img/for-teachers.png"
-        :learn="true"
+      :learn="urls.tutoring"
         text="Create an easier and more effective teaching experience for you and your students with the right tools and resources, online or offline." />
     </section>
     <section class="container my-16">
-      <h4 class="text-[32px] mb-2 text-center lg:mt-0 font-bold tracking-tight text-[#113255]">
+      <h4 class="text-[2rem] mb-2 text-center lg:mt-0 font-bold tracking-tight text-[#113255]">
         Over 3000 fun and interactive video lessons <br></br> across all topics
       </h4>
       <p class="text-[21px] font-light text-gray-700 mb-7 text-center">
@@ -106,58 +106,27 @@
         in core subjects.
       </p>
         <div>
-          <slider></slider>
+          <slider :parents="true"></slider>
         </div>
     </section>
-    <section class="container my-16">
+    <section class="container my-16 hidden lg:block">
       <div class="text-center">
         <h3 class="text-2xl mb-4 font-semibold text-[#113255]">
           What parents say about Gradely Tutoring
         </h3>
       </div>
-      <div class="mx-auto lg:w-full mb-5">
+      <div class="mx-auto lg:w-full  mb-5">
         <HomeTestimonies :testimonies="testimonies" />
       </div>
 
     </section>
-    <section class="container mx-auto lg:w-9/12 bg-[url('/img/bg-pattern.svg')] rounded-[30px] mb-16">
-      <div class="px-2 pt-10">
-        <div class="flex flex-col xl:flex-row items-center gap-8">
-          <div class="p-4 lg:pb-10">
-            <h4 class="text-2xl lg:text-[34px] lg:leading-10 text-center lg:text-left font-medium text-[#113255] my-2">Join thousands of great <br></br> learners using
-              Gradely to excel</h4>
-            <div class="flex items-center justify-center lg:justify-start gap-6 mt-5 mb-10">
-              <div class="flex justify-start flex-col items-start gap-1">
-                <p class="uppercase text-[#757575] text-base font-medium">Students</p>
-                <h6 class="text-[#004680] text-3xl">12,881</h6>
-              </div>
-              <div class="flex justify-start flex-col items-start gap-1">
-                <p class="uppercase text-[#757575] text-base font-medium">Teachers</p>
-                <h6 class="text-[#004680] text-3xl">11,938</h6>
-              </div>
-              <div class="flex justify-start flex-col items-start gap-1">
-                <p class="uppercase text-[#757575] text-base font-medium">Learning Minutes</p>
-                <h6 class="text-[#004680] text-3xl">1686,944</h6>
-              </div>
-            </div>
-            <div class="flex flex-col items-center md:flex-row gap-4">
-              <UiGoogleAppleButton :apple="true" />
-              <UiGoogleAppleButton :google="true" />
-              <UiGoogleAppleButton :web="true" />
-            </div>
-          </div>
-          <div>
-            <NuxtImg src="/img/appScreens.png" class="block w-full select-none pointer-events-none h-[20rem] lg:w-auto xl:h-auto"  />
-          </div>
-        </div>
-      </div>
-    </section>
+    <UiJoinCard/>
     <HomeFooter />
   </main>
 </template>
 
 <script setup lang="ts">
-
+import { urls } from "~/assets/urls";
 import type { Testimony } from "~/components/home/testimonies.vue";
 import type { Faq } from "~/components/ui/faq.vue";
 import slider from "~/components/home/slider.vue"
@@ -223,6 +192,10 @@ const testimonies: Testimony[] = [
     percenatage: 93
   },
 ];
+
+const bookASession = () =>{
+
+}
 </script>
 
 

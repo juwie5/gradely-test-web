@@ -6,40 +6,38 @@
           <NuxtImg src="/img/logo.svg" alt="Gradely logo" class="w-32" />
         </NuxtLink>
       </div>
-      <div class="hidden lg:flex items-center justify-center gap-16">
+      <div class="flex items-center justify-center gap-8">
         <div class="dropdown">
-          <NuxtLink :to="urls.parents"
+          <NuxtLink 
             class="flex gap-2 items-center text-[#757575] text-sm font-bold hover:text-[#113255]">
             Parents
             <NuxtIcon name="arrow-down-line" class="pt-1" />
           </NuxtLink>
           <div class="dropdown-content">
-            <li class="">
-              <NuxtLink href="parents_lander.html" class="text-[#113255] text-sm font-medium">Learn</NuxtLink>
-              <p class="text-xs font-light text-[#757575]">Personalized learning with videos & Quizzes</p>
+            <li class="flex flex-col">
+              <NuxtLink :to="urls.parents" class="text-[#113255] text-sm font-medium">Learn</NuxtLink>
+              <NuxtLink :to="urls.parents" class="text-xs font-light text-[#757575]">Personalized learning with videos & Quizzes</NuxtLink>
             </li>
-            <li class="py-2">
-              <NuxtLink href="examPrep.html" class="text-[#113255] text-sm font-medium">Online Tutoring</NuxtLink>
-              <p class="text-xs font-light text-[#757575]">Hire an experienced Gradely tutor</p>
+            <li class="flex flex-col">
+              <NuxtLink :to="urls.tutoring" class="text-[#113255] text-sm font-medium">Online Tutoring</NuxtLink>
+              <NuxtLink :to="urls.tutoring" class="text-xs font-light text-[#757575]">Hire an experienced Gradely tutor</NuxtLink>
             </li>
-            <li class="">
-              <NuxtLink href="tutoring.html" class="text-[#113255] text-sm font-medium">Exam Prep</NuxtLink>
-              <p class="text-xs font-light text-[#757575]">Prepare & Track your exam readiness</p>
+            <li class="flex flex-col">
+              <NuxtLink :to="urls.exams" class="text-[#113255] text-sm font-medium">Exam Prep</NuxtLink>
+              <NuxtLink :to="urls.exams" class="text-xs font-light text-[#757575]">Prepare & Track your exam readiness</NuxtLink>
             </li>
-            <li class="py-2">
-              <NuxtLink href="summerSchool.html" class="text-[#113255] text-sm font-medium py-2">Coding School
-              </NuxtLink>
-              <p class="text-xs font-light text-[#757575]">Learn to code in a fun way</p>
+            <li class="flex flex-col">
+              <NuxtLink :to="urls.summer_school" class="text-[#113255] text-sm font-medium">Coding School</NuxtLink>
+              <NuxtLink :to="urls.summer_school" class="text-xs font-light text-[#757575]">Learn to code in a fun way</NuxtLink>
             </li>
           </div>
         </div>
-
         <NuxtLink
-          class="text-[#757575] text-sm font-bold cursor-pointer hover:bg-[#DBF5F8] hover:py-2.5 hover:px-[18px] hover:rounded-[25px] hover:text-[#113255]">
+          class="text-[#757575] text-sm font-bold cursor-pointer py-2.5 px-[18px] hover:bg-[#DBF5F8] hover:rounded-[25px] hover:text-[#113255] w-1/2">
           Schools
         </NuxtLink>
         <NuxtLink
-          class="text-[#757575] text-sm font-bold cursor-pointer hover:bg-[#DBF5F8] hover:py-2.5 hover:px-[18px] hover:rounded-[25px] hover:text-[#113255]">
+          class="text-[#757575] text-sm font-bold cursor-pointer hover:bg-[#DBF5F8] py-2.5 px-[18px] hover:rounded-[25px] hover:text-[#113255] w-1/2">
           Teachers
         </NuxtLink>
         <div class="dropdown">
@@ -48,17 +46,17 @@
             <NuxtIcon name="arrow-down-line" class="pt-1" />
           </NuxtLink>
           <div class="dropdown-content">
-            <li class="">
+            <li  class="flex flex-col">
               <NuxtLink href="parents_lander.html" class="text-[#113255] text-sm font-medium">About Us</NuxtLink>
-              <p class="text-xs font-light text-[#757575]">Learn more about us, our Mission & Vision</p>
+              <NuxtLink class="text-xs font-light text-[#757575]">Learn more about us, our Mission & Vision</NuxtLink>
             </li>
-            <li class="py-2">
+            <li  class="flex flex-col">
               <NuxtLink href="examPrep.html" class="text-[#113255] text-sm font-medium">Blog</NuxtLink>
-              <p class="text-xs font-light text-[#757575]">Read about latest trends in education</p>
+              <NuxtLink class="text-xs font-light text-[#757575]">Read about latest trends in education</NuxtLink>
             </li>
-            <li class="">
+            <li  class="flex flex-col">
               <NuxtLink href="tutoring.html" class="text-[#113255] text-sm font-medium">Help Center</NuxtLink>
-              <p class="text-xs font-light text-[#757575]">Find help on how to use Gradely</p>
+              <NuxtLink class="text-xs font-light text-[#757575]">Find help on how to use Gradely</NuxtLink>
             </li>
 
           </div>
@@ -259,32 +257,48 @@ const handleActiveTab = (item) => {
 
 <style>
 .dropdown {
-  /* float: left;
-  overflow: hidden; */
+  width: 50%;
   cursor: pointer;
+  padding: 10px 18px;
+
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #fff;
-  padding: 25px;
+  /* padding: 25px; */
   min-width: 240px;
   box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.15);
   z-index: 1;
   border-radius: 10px;
 }
 
+.dropdown:hover{
+  background-color: #DBF5F8;
+}
+
 .dropdown-content li {
   text-decoration: none;
   list-style: none;
+  padding: 15px;
+}
+
+.dropdown-content li:hover{
+  background-color: #DBF5F8;
+}
+
+.dropdown-content li:nth-child(1):hover{
+  border-radius: 10px 10px 0 0;
+}
+
+.dropdown-content li:nth-last-child(1):hover{
+  border-radius: 0 0 10px 10px;
 }
 
 .dropdown:hover {
   background-color: #DBF5F8;
-  padding: 10px 18px;
   border-radius: 25px;
-  margin-right: 10px;
   color: #113255;
 }
 

@@ -16,8 +16,8 @@
       <p class="text-base font-light text-[#555555]">
         {{ text }}
       </p>
-      <div v-if="learn" class="border-2 border-[#D5D5D5] rounded-[40px] px-4 py-2 w-40 mt-8 cursor-pointer hover:bg-[#dbf5f8] hover:border-none hover:shadow-lg hover:shadow-slate-400/50">
-        <p class="uppercase text-center text-sm text-[#113255] font-bold">Learn more</p>
+      <div v-if="learn" class="flex justify-center border-2 border-[#D5D5D5] rounded-[40px] px-4 py-2 w-40 mt-8 cursor-pointer hover:bg-[#dbf5f8] hover:border-transparent hover:shadow-lg hover:shadow-slate-400/50">
+        <NuxtLink :to="learn" class="uppercase text-center text-sm text-[#113255] font-bold">Learn more</NuxtLink>
       </div>
     </div>
   </div>
@@ -31,7 +31,7 @@ interface ImageTextBlockProps {
   imageUrl: string;
   color?: string;
   label?: string;
-  learn?: Boolean;
+  learn?: string;
   
 }
 

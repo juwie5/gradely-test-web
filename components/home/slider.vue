@@ -1,7 +1,7 @@
 <template>
     <UCarousel v-slot="{ item }" :items="items" arrows>
         <!-- <img :src="item" width="300" height="400" draggable="false"> -->
-        <div class="border border-[#E5E5E5] rounded-[10px] p-4 cursor-pointer w-[90%]" @click="isOpen = !isOpen">
+        <div class="rounded-[10px]  cursor-pointer w-[90%] flex flex-col justify-between" :class="[parents ? 'border border-[#E5E5E5] p-4' : 'border-none p-2 w-full']" @click="showModal(item)">
             <div class="relative">
                 <div class="absolute left-[40%] right-[50%] top-[38%] bottom-[50%]">
                     <span class="ctaIconHolder ctaIconHolder_m">
@@ -12,9 +12,9 @@
                         </svg>
                     </span>
                 </div>
-                <NuxtImg src="/img/dummy_video_thumb.png" class="rounded-[15px] hover:bg-[rgba(0, 0, 0, 0.5)]" />
+                <NuxtImg :src="`${item.thumbnail}`" class="rounded-[15px] object-fit h-40 w-72 hover:bg-[rgba(0, 0, 0, 0.5)]" />
             </div>
-            <div class="mt-2">
+            <div v-if="parents" class="mt-2">
                 <h4 class="uppercase text-[#11BDCF] text-xs font-bold">{{ item.subject }}</h4>
                 <p class="text-base text-[#113255] font-medium">{{ item.topic }}</p>
             </div>
@@ -26,22 +26,21 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <div class="dialogDismiss">
-                                <button type="button" class="close_dialog" @click="isOpen = !isOpen"></button>
+                                <button type="button" class="close_dialog" @click="closeModal"></button>
                             </div>
                         </div>
                         <div class="modal-body mediaRenderDialogbody">
                             <div class="content_wrapper">
                                 <div class="embed-responsive embed-responsive-16by9">
                                     <iframe width="760" height="515" class="embed-responsive-item"
-                                        src="https://www.youtube.com/embed/Cm2z8fwVPvE" title="YouTube video player"
+                                        :src="`${selectedVideo}`" title="YouTube video player"
                                         frameborder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"></iframe>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-           
+                </div>  
         </div>
     </section>
 </template>
@@ -49,40 +48,61 @@
 <script setup>
 import { ref } from 'vue';
 let isOpen = ref(false);
+defineProps({
+  parents: Boolean
+})
 
 const items = [
     {
-        videoUrl: 'https://picsum.photos/600/800?random=1',
-        subject: 'Mathematics',
-        topic: 'Estimation & Accuracy',
-        thumbnail: ""
+        videoUrl:"https://www.youtube.com/embed/Cm2z8fwVPvE?si=h69dJslt8dpG7RjD",
+        subject: "Mathematics",
+        topic: "Understanding Algebric Expresss",
+        thumbnail: "https://img.youtube.com/vi/Cm2z8fwVPvE/maxresdefault.jpg"
     },
     {
-        videoUrl: 'https://picsum.photos/600/800?random=1',
-        subject: 'English language',
-        topic: 'Estimation & Accuracy'
+        videoUrl: "https://www.youtube.com/embed/G01P3ucPz9I?si=79LRnBjr3mfMBm3n",
+        subject: "English language",
+        topic: "Vowel Sounds",
+        thumbnail: "https://img.youtube.com/vi/G01P3ucPz9I/maxresdefault.jpg"
     },
     {
-        videoUrl: 'https://picsum.photos/600/800?random=1',
-        subject: 'Physics',
-        topic: 'Estimation & Accuracy'
+        videoUrl: "https://www.youtube.com/embed/AhA49iI8AiM?si=qXBBRt1QERFwfEyJ",
+        subject: "Sciences",
+        topic: "Classes of Food",
+        thumbnail:"https://img.youtube.com/vi/AhA49iI8AiM/maxresdefault.jpg"
     },
     {
-        videoUrl: 'https://picsum.photos/600/800?random=1',
-        subject: 'Chemistry',
-        topic: 'Estimation & Accuracy'
+        videoUrl: "https://www.youtube.com/embed/Huyql3McF6M?si=YO4tmvotTRup4VmV",
+        subject: "Social Studies",
+        topic: "Drug Addiction and Drug Abuse",
+        thumbnail: "https://img.youtube.com/vi/Huyql3McF6M/maxresdefault.jpg"
     },
     {
-        videoUrl: 'https://picsum.photos/600/800?random=1',
-        subject: 'Biology',
-        topic: 'Estimation & Accuracy'
+        videoUrl: "https://www.youtube.com/embed/VU0SbC0UgTE?si=vR3HDzL2wERUft5f",
+        subject: "Chemistry",
+        topic: "Chemistry Past Questions",
+        thumbnail: "https://img.youtube.com/vi/VU0SbC0UgTE/maxresdefault.jpg"
     },
     {
-        videoUrl: 'https://picsum.photos/600/800?random=1',
-        subject: 'Economics',
-        topic: 'Estimation & Accuracy'
-    }
-]
+        videoUrl: "https://www.youtube.com/embed/CMIk5s9p1TQ?si=-zybqogqVclJLg5n",
+        subject: "Sciences",
+        topic: "Air",
+        thumbnail: "https://img.youtube.com/vi/CMIk5s9p1TQ/maxresdefault.jpg" 
+    },
+   
+];
+
+let selectedVideo = ref("");
+
+const showModal = (item) => {
+    isOpen.value = !isOpen.value;
+    selectedVideo.value = item.videoUrl
+};
+
+const closeModal = (item) => {
+    isOpen.value = !isOpen.value;
+    selectedVideo.value = "";
+};
 
 
 </script>
@@ -96,8 +116,8 @@ const items = [
 
 .ctaIconHolder {
     display: inline-flex;
-    width: 58px;
-    height: 58px;
+    width: 48px;
+    height: 48px;
     border-radius: 33%;
     background-color: #FEF7ED;
     align-items: center;
@@ -118,14 +138,14 @@ const items = [
 }
 
 .icon_sm {
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
 }
 
 .cust_icon {
     display: inline-block;
-    width: 48px;
-    height: 48px;
+    width: 28px;
+    height: 28px;
     flex-shrink: 0;
     overflow: hidden;
     vertical-align: middle;

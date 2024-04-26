@@ -1,10 +1,7 @@
 <template>
-  <div class="w-full flex  gap-5 custom-scrollbar overflow-x-auto">
-    <div
-      v-for="({name, child, text, percenatage, keyStage}, index) in testimonies"
-      :key="index"
-      class="w-72 flex-shrink-0 aspect-[37/42] border border-gray-200 bg-white mb-5 p-5 lg:p-7 rounded-lg flex flex-col justify-between"
-    >
+  <div class="w-full flex gap-5 custom-scrollbar overflow-x-auto">
+    <div v-for="({ name, child, text, percenatage, keyStage }, index) in testimonies" :key="index"
+      class="w-72 flex-shrink-0 aspect-[37/42] border border-gray-200 bg-white mb-5 p-5 lg:p-7 rounded-lg flex flex-col justify-between">
       <div>
         <div class="flex gap-5 items-center">
           <div class="rounded-lg size-12 bg-blue-300" />
@@ -16,10 +13,7 @@
           </div>
         </div>
         <div class="my-4">
-          <NuxtImg
-            src="/img/quote.svg"
-            class="size-10 pointer-events-none select-none"
-          />
+          <NuxtImg src="/img/quote.svg" class="size-10 pointer-events-none select-none" />
         </div>
       </div>
       <div class="mb-5 text-base leading-normal text-gray-700">
@@ -37,17 +31,17 @@
   </div>
 </template>
 <script setup lang="ts">
-  export interface Testimony {
-    name: string;
-    child: string;
-    text: string;
-    keyStage: string;
-    percenatage: number;
-  }
+export interface Testimony {
+  name: string;
+  child: string;
+  text: string;
+  keyStage: string;
+  percenatage: number;
+}
 
-  interface TestimoniesProps {
-    testimonies: Testimony[]
-  }
+interface TestimoniesProps {
+  testimonies: Testimony[]
+}
 
-  defineProps<TestimoniesProps>()
+defineProps<TestimoniesProps>()
 </script>

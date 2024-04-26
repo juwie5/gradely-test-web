@@ -1,14 +1,14 @@
 <template>
     <main class="bg-[#FDFAFA] font-noto relative overflow-hidden">
-        <div aria-hidden class="bg-local bg-no-repeat bg-contain absolute top-[580px] right-0 w-[520px] h-[520px]"
+        <div aria-hidden class="bg-local bg-no-repeat bg-contain absolute top-[580px] right-0 w-[520px] h-[520px] pointer-events-none"
             style="background-image: url('/img/ellipse-4.svg'); background-position: top right;" />
-        <div aria-hidden class="bg-local bg-no-repeat bg-contain absolute top-[900px] left-0 w-[520px] h-[520px]"
+        <div aria-hidden class="bg-local bg-no-repeat bg-contain absolute top-[900px] left-0 w-[520px] h-[520px] pointer-events-none"
             style="background-image: url('/img/ellipse-1.svg'); background-position: top left;" />
-        <div aria-hidden class="bg-local bg-no-repeat bg-contain absolute top-[2000px] right-0 w-[520px] h-[520px]"
+        <div aria-hidden class="bg-local bg-no-repeat bg-contain absolute top-[2000px] right-0 w-[520px] h-[520px] pointer-events-none"
             style="background-image: url('/img/ellipse-2.svg'); background-position: top right;" />
-        <div aria-hidden class="bg-local bg-no-repeat bg-contain absolute top-[3000px] left-0 w-[520px] h-[520px]"
+        <div aria-hidden class="bg-local bg-no-repeat bg-contain absolute top-[3000px] left-0 w-[520px] h-[520px] pointer-events-none"
             style="background-image: url('/img/ellipse-3.svg'); background-position: top left;" />
-        <div aria-hidden class="bg-local bg-no-repeat bg-contain absolute top-[3700px] right-0 w-[520px] h-[520px]"
+        <div aria-hidden class="bg-local bg-no-repeat bg-contain absolute top-[3700px] right-0 w-[520px] h-[520px] pointer-events-none"
             style="background-image: url('/img/ellipse-4.svg'); background-position: top right;" />
         <HomeNavbar />
         <ParentHero />
@@ -25,8 +25,8 @@
                 text="Practice difficult topics with our recommended assessments & video lesson library anywhere, anytime." />
 
         </section>
-        <section class="container my-16">
-            <div class="mb-8">
+        <section class="my-16">
+            <div class="container mb-8">
                 <div class="rounded-[40px] px-4 py-2 w-40 mt-4 lg:mt-0 bg-[#F5F5F5]">
                     <p class="uppercase text-center text-base text-[#113255] font-bold">Video Lessons</p>
                 </div>
@@ -37,74 +37,20 @@
                 </div>
             </div>
 
-            <div class="flex gap-4">
-                <div class="border border-[#E5E5E5] rounded-[10px] p-4 cursor-pointer">
-                    <div class="relative">
-                        <div class="absolute left-[40%] right-[50%] top-[38%] bottom-[50%]"
-                            style="background-color: rgb(0, 0, 0, 0.25);">
-                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="48" height="48" rx="20" fill="#FCEACF" />
-                                <path
-                                    d="M33.7793 22.7198L20.2822 14.4712C20.0549 14.3322 19.7946 14.2563 19.5282 14.2512C19.2617 14.2462 18.9988 14.3122 18.7663 14.4426C18.5339 14.5729 18.3404 14.7628 18.2057 14.9927C18.071 15.2226 18 15.4843 18 15.7508V32.2493C18.0002 32.5157 18.0714 32.7772 18.2061 33.0071C18.3408 33.2369 18.5343 33.4266 18.7667 33.5569C18.9991 33.6872 19.2619 33.7533 19.5283 33.7483C19.7946 33.7434 20.0548 33.6677 20.2822 33.5289L33.7793 25.2803C33.9986 25.1462 34.1797 24.9581 34.3054 24.7339C34.4311 24.5098 34.4971 24.2571 34.4971 24.0001C34.4971 23.7431 34.4311 23.4904 34.3054 23.2662C34.1797 23.042 33.9986 22.8539 33.7793 22.7198Z"
-                                    fill="#FAA017" />
-                            </svg>
-                        </div>
-                        <NuxtImg src="/img/dummy_video_thumb.png" class="rounded-[15px] " />
-                    </div>
-                    <div class="mt-2">
-                        <h4 class="uppercase text-[#11BDCF] text-xs font-bold">Mathematics</h4>
-                        <p class="text-base text-[#113255] fornt-medium">English Language</p>
-                    </div>
-                </div>
-                <div class="border border-[#E5E5E5] rounded-[10px] p-4 cursor-pointer">
-                    <div class="relative">
-                        <div class="absolute left-[40%] right-[50%] top-[38%] bottom-[50%]"
-                            style="background-color: rgb(0, 0, 0, 0.25);">
-                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="48" height="48" rx="20" fill="#FCEACF" />
-                                <path
-                                    d="M33.7793 22.7198L20.2822 14.4712C20.0549 14.3322 19.7946 14.2563 19.5282 14.2512C19.2617 14.2462 18.9988 14.3122 18.7663 14.4426C18.5339 14.5729 18.3404 14.7628 18.2057 14.9927C18.071 15.2226 18 15.4843 18 15.7508V32.2493C18.0002 32.5157 18.0714 32.7772 18.2061 33.0071C18.3408 33.2369 18.5343 33.4266 18.7667 33.5569C18.9991 33.6872 19.2619 33.7533 19.5283 33.7483C19.7946 33.7434 20.0548 33.6677 20.2822 33.5289L33.7793 25.2803C33.9986 25.1462 34.1797 24.9581 34.3054 24.7339C34.4311 24.5098 34.4971 24.2571 34.4971 24.0001C34.4971 23.7431 34.4311 23.4904 34.3054 23.2662C34.1797 23.042 33.9986 22.8539 33.7793 22.7198Z"
-                                    fill="#FAA017" />
-                            </svg>
-                        </div>
-                        <NuxtImg src="/img/dummy_video_thumb.png" class="rounded-[15px] " />
-                    </div>
-                    <div class="mt-2">
-                        <h4 class="uppercase text-[#11BDCF] text-xs font-bold">Mathematics</h4>
-                        <p class="text-base text-[#113255] fornt-medium">English Language</p>
-                    </div>
-                </div>
-                <div class="border border-[#E5E5E5] rounded-[10px] p-4 cursor-pointer">
-                    <div class="relative">
-                        <div class="absolute left-[40%] right-[50%] top-[38%] bottom-[50%]"
-                            style="background-color: rgb(0, 0, 0, 0.25);">
-                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="48" height="48" rx="20" fill="#FCEACF" />
-                                <path
-                                    d="M33.7793 22.7198L20.2822 14.4712C20.0549 14.3322 19.7946 14.2563 19.5282 14.2512C19.2617 14.2462 18.9988 14.3122 18.7663 14.4426C18.5339 14.5729 18.3404 14.7628 18.2057 14.9927C18.071 15.2226 18 15.4843 18 15.7508V32.2493C18.0002 32.5157 18.0714 32.7772 18.2061 33.0071C18.3408 33.2369 18.5343 33.4266 18.7667 33.5569C18.9991 33.6872 19.2619 33.7533 19.5283 33.7483C19.7946 33.7434 20.0548 33.6677 20.2822 33.5289L33.7793 25.2803C33.9986 25.1462 34.1797 24.9581 34.3054 24.7339C34.4311 24.5098 34.4971 24.2571 34.4971 24.0001C34.4971 23.7431 34.4311 23.4904 34.3054 23.2662C34.1797 23.042 33.9986 22.8539 33.7793 22.7198Z"
-                                    fill="#FAA017" />
-                            </svg>
-                        </div>
-                        <NuxtImg src="/img/dummy_video_thumb.png" class="rounded-[15px] " />
-                    </div>
-                    <div class="mt-2">
-                        <h4 class="uppercase text-[#11BDCF] text-xs font-bold">Mathematics</h4>
-                        <p class="text-base text-[#113255] fornt-medium">English Language</p>
-                    </div>
-                </div>
-
+            <div class="flex flex-col mask">
+             <HomeParentsSlider></HomeParentsSlider>
+             <HomeParentsSlider class="flex-row-reverse"></HomeParentsSlider>
             </div>
         </section>
         <section class="container my-16">
             <div class="flex flex-col">
-                <UiImageTextBlock color="#F5F5F5" direction="right" label="Tutoring" image-url="/img/tutoring.png"
-                    :learn="true" title="Get to 100% mastery with 1-on-1 tutor sessions"
+                <UiImageTextBlock color="#F5F5F5" direction="right" label="Tutoring" 
+                    image-url="/img/tutoring.png"
+                    :learn="urls.tutoring" title="Get to 100% mastery with 1-on-1 tutor sessions"
                     text="Join group or private online tutor sessions for more help in your home work, special exams, or to ask questions on difficult academic concepts." />
-                <UiImageTextBlock color="#F5F5F5" direction="left" label="Exam Prep" image-url="/img/exam-prep.png"
-                    :learn="true" title="Prepare for exams"
+                <UiImageTextBlock color="#F5F5F5" direction="left" label="Exam Prep" 
+                    image-url="/img/exam-prep.png"
+                    :learn="urls.exams" title="Prepare for exams"
                     text="Practice with mock exams, accurate past questions & explainer videos to get yourself exam-ready for Common Entrance, WAEC, JAMB, and other national & international examinations." />
             </div>
         </section>
@@ -120,7 +66,7 @@
             </div>
             <div class="flex flex-col lg:flex-row gap-7 mb-24">
                 <div class="w-96 border border-[#D5D5D5] rounded-[15px]">
-                    <div class="bg-[#FCEACF] rounded-t-[15px] w-full py-3.5">
+                    <div class="bg-[#FFDCDE] rounded-t-[15px] w-full py-3.5">
                         <p class="uppercase text-base text-[#113255] font-bold text-center">1 Month</p>
                     </div>
                     <div class="text-center pt-5 pb-8">
@@ -128,7 +74,7 @@
                         <p class="text-xs text-[#757575]">Per User</p>
                     </div>
                     <div class="text-center mb-5">
-                        <button class="mx-auto bg-[#FCEACF] border border-[#FAA017] py-2 px-16 rounded-[20px]">
+                        <button class="mx-auto bg-[#FCEACF] border border-[#FAA017] py-2 px-16 rounded-[20px] hover:bg-[#FAA017]">
                             Subscribe Now
                         </button>
                     </div>
@@ -142,7 +88,7 @@
                         <p class="text-xs text-[#757575]">Per User</p>
                     </div>
                     <div class="text-center mb-5">
-                        <button class="mx-auto bg-[#FAA017] border  py-2 px-16 rounded-[20px]">
+                        <button class="mx-auto bg-[#FAA017] border py-2 px-16 rounded-[20px] hover:bg-[#11BDCF]">
                             Subscribe Now
                         </button>
                     </div>
@@ -156,7 +102,7 @@
                         <p class="text-xs text-[#757575]">Per User</p>
                     </div>
                     <div class="text-center mb-5">
-                        <button class="mx-auto bg-[#FCEACF] border border-[#FAA017] py-2 px-16 rounded-[20px]">
+                        <button class="mx-auto bg-[#FCEACF] border border-[#FAA017] py-2 px-16 rounded-[20px] hover:bg-[#FAA017]">
                             Subscribe Now
                         </button>
                     </div>
@@ -384,5 +330,9 @@ const testimonies: Testimony[] = [
     .frameWorkItem:last-child .frameWorkItemFig::before {
         display: none;
     }
+}
+
+.mask {
+    mask-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgb(0, 0, 0) 14.5%, rgb(0, 0, 0) 81.5%, rgba(255, 255, 255, 0) 100%);
 }
 </style>
