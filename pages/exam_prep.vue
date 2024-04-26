@@ -1,14 +1,14 @@
 <template>
     <main class="bg-[#FDFAFA] font-noto relative overflow-hidden">
-      <div aria-hidden class="bg-local bg-no-repeat bg-contain absolute top-[580px] right-0 w-[520px] h-[520px]"
+      <div aria-hidden class="bg-local bg-no-repeat bg-contain absolute top-[580px] right-0 w-[520px] h-[520px] pointer-events-none"
         style="background-image: url('/img/ellipse-4.svg'); background-position: top right;" />
-      <div aria-hidden class="bg-local bg-no-repeat bg-contain absolute top-[900px] left-0 w-[520px] h-[520px]"
+      <div aria-hidden class="bg-local bg-no-repeat bg-contain absolute top-[900px] left-0 w-[520px] h-[520px] pointer-events-none"
         style="background-image: url('/img/ellipse-1.svg'); background-position: top left;" />
-      <div aria-hidden class="bg-local bg-no-repeat bg-contain absolute top-[2000px] right-0 w-[520px] h-[520px]"
+      <div aria-hidden class="bg-local bg-no-repeat bg-contain absolute top-[2000px] right-0 w-[520px] h-[520px] pointer-events-none"
         style="background-image: url('/img/ellipse-2.svg'); background-position: top right;" />
-      <div aria-hidden class="bg-local bg-no-repeat bg-contain absolute top-[3000px] left-0 w-[520px] h-[520px]"
+      <div aria-hidden class="bg-local bg-no-repeat bg-contain absolute top-[3000px] left-0 w-[520px] h-[520px] pointer-events-none"
         style="background-image: url('/img/ellipse-3.svg'); background-position: top left;" />
-      <div aria-hidden class="bg-local bg-no-repeat bg-contain absolute top-[3700px] right-0 w-[520px] h-[520px]"
+      <div aria-hidden class="bg-local bg-no-repeat bg-contain absolute top-[3700px] right-0 w-[520px] h-[520px] pointer-events-none"
         style="background-image: url('/img/ellipse-4.svg'); background-position: top right;" />
       <HomeNavbar/>
       <HomeHero />
