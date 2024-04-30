@@ -13,7 +13,7 @@
     <HomeNavbar/>
     <HomeHero />
     <section class="container text-center my-16">
-      <div class="w-full flex gap-16 custom-scrollbar overflow-x-auto justify-center">
+      <div class="w-full flex gap-8 lg:gap-16 custom-scrollbar overflow-x-auto justify-start lg:justify-between">
         <img class="w-42" src="assets/icons/techcabal.svg" />
         <img  class="w-42" src="assets/icons/techpoint.svg" />
         <img  class="w-42" src="assets/icons/techcrunch.svg" />
@@ -24,14 +24,14 @@
         <h3 class="text-5xl mb-4 font-bold tracking-tighter text-[#113255]">
           How it works
         </h3>
-        <p class="mb-8 text-base font-light text-gray-700">
+        <p class="mb-8 text-base font-normal text-gray-700">
           According to a study by 8 professors from the University of Oxford, Gradely <br></br> improves grades by 50%
           in 3 months.
         </p>
       </div>
       <div class="relative">
         <figure class="hidden lg:flex justify-center items-center text-center">
-          <img src="/img/gradelyFrameworkWheel.svg" alt="The Gradely Framework">
+          <img src="/img/gradelyFrameworkWheel.svg" alt="The Gradely Framework" class="w-full max-w-[26.25rem]">
         </figure>
         <div class="flex items-center lg:absolute top-[30px] left-[60px] text-left mb-5">
           <div class="frameWorkItemFig lg:hidden shrink-0 relative mr-5">
@@ -101,7 +101,7 @@
       <h4 class="text-[2rem] mb-2 text-center lg:mt-0 font-bold tracking-tight text-[#113255]">
         Over 3000 fun and interactive video lessons <br></br> across all topics
       </h4>
-      <p class="text-[21px] font-light text-gray-700 mb-7 text-center">
+      <p class="text-[21px] font-normal text-gray-700 mb-7 text-center">
         Learn or relearn your subject topics with our library of well illustrated pre- <br></br>recorded video lessons
         in core subjects.
       </p>
@@ -120,7 +120,7 @@
       </div>
 
     </section>
-    <UiJoinCard/>
+    <UiJoinCard class="hidden"/>
     <HomeFooter />
   </main>
 </template>
@@ -199,7 +199,7 @@ const bookASession = () =>{
 </script>
 
 
-<style>
+<style scoped>
 .nuxt-icon svg {
   margin-bottom: 0;
 }
