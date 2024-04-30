@@ -51,8 +51,8 @@
               <NuxtLink :to="urls.about" class="text-xs font-light text-[#757575]">Learn more about us, our Mission & Vision</NuxtLink>
             </li>
             <li  class="flex flex-col">
-              <NuxtLink :to="urls.blogs" href="examPrep.html" class="text-[#113255] text-sm font-medium">Blog</NuxtLink>
-              <NuxtLink :to="urls.blogs" class="text-xs font-light text-[#757575]">Read about latest trends in education</NuxtLink>
+              <NuxtLink :to="urls.blog" href="examPrep.html" class="text-[#113255] text-sm font-medium">Blog</NuxtLink>
+              <NuxtLink :to="urls.blog" class="text-xs font-light text-[#757575]">Read about latest trends in education</NuxtLink>
             </li>
             <li  class="flex flex-col">
               <NuxtLink :to="urls.help" class="text-[#113255] text-sm font-medium">Help Center</NuxtLink>
@@ -162,7 +162,7 @@
             <NuxtLink :to="urls.about" class="text-[#113255] text-sm font-medium">About Us</NuxtLink>
           </div>
           <div class="py-2">
-            <NuxtLink :to="urls.blogs" class="text-[#113255] text-sm font-medium">Blog</NuxtLink>
+            <NuxtLink :to="urls.blog" class="text-[#113255] text-sm font-medium">Blog</NuxtLink>
           </div>
           <div class="">
             <NuxtLink :to="urls.help" class="text-[#113255] text-sm font-medium">Help Center</NuxtLink>
