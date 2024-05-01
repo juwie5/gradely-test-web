@@ -11,7 +11,7 @@
                         </svg>
                     </span>
                 </div>
-                <NuxtImg :src="`${item.thumbnail}`" class="rounded-[15px] object-fit h-40 w-72 hover:bg-[rgba(0, 0, 0, 0.5)]" />
+                <img :src="`${item.thumbnail}`" class="rounded-[15px] object-fit h-40 w-72 hover:bg-[rgba(0, 0, 0, 0.5)]" />
             </div>
             <div v-if="parents" class="mt-2">
                 <h4 class="uppercase text-[#11BDCF] text-xs font-bold">{{ item.subject }}</h4>

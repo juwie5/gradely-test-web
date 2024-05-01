@@ -19,7 +19,7 @@
           </div>
         </div>
         <div class="flex items-center">
-         <NuxtImg src="/img/homeHero_anim.gif" fit="inside"  class="w-[40rem]"/>
+         <img src="/img/homeHero_anim.gif" fit="inside"  class="w-[40rem]"/>
         </div>
       </div>
     </div>

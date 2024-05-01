@@ -18,7 +18,7 @@
 
                 </div>
                 <div class="flex items-center mt-16">
-                    <NuxtImg src="/img/examPrepHero.png" fit="inside" class="w-[30rem]" />
+                    <img src="/img/examPrepHero.png" fit="inside" class="w-[30rem]" />
                 </div>
             </div>
         </div>
