@@ -1,6 +1,6 @@
 <template>
     <UCarousel v-slot="{ item }" :items="items" arrows>
-        <div class="rounded-[10px]  cursor-pointer w-[90%] flex flex-col justify-between" :class="[parents ? 'border border-[#E5E5E5] p-4' : 'border-none p-2 w-full']" @click="showModal(item)">
+        <div class="rounded-[10px]  cursor-pointer w-full max-w-[370px] flex flex-col justify-between mr-3.5" :class="[parents ? 'border border-[#E5E5E5] p-4' : 'border-none p-2 w-full']" @click="showModal(item)">
             <div class="relative">
                 <div class="absolute left-[40%] right-[50%] top-[38%] bottom-[50%]">
                     <span class="ctaIconHolder ctaIconHolder_m">
@@ -11,7 +11,7 @@
                         </svg>
                     </span>
                 </div>
-                <img :src="`${item.thumbnail}`" class="rounded-[15px] object-fit h-40 w-72 hover:bg-[rgba(0, 0, 0, 0.5)]" />
+                <NuxtImg :src="`${item.thumbnail}`" class="rounded-[15px] object-fit h-40 w-72 hover:bg-[rgba(0, 0, 0, 0.5)]" />
             </div>
             <div v-if="parents" class="mt-2">
                 <h4 class="uppercase text-[#11BDCF] text-xs font-bold">{{ item.subject }}</h4>
@@ -30,12 +30,17 @@
                         </div>
                         <div class="modal-body mediaRenderDialogbody">
                             <div class="content_wrapper">
-                                <div class="embed-responsive embed-responsive-16by9">
+                                <div class="hidden lg:block embed-responsive embed-responsive-16by9">
                                     <iframe width="760" height="515" class="embed-responsive-item"
                                         :src="`${selectedVideo}`" title="YouTube video player"
                                         frameborder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"></iframe>
                                 </div>
+                                <div class="flex items-center justify-center md:hidden">
+                                        <iframe width="342" height="208" class="embed-responsive-item"
+                                        :src="`${selectedVideo}`" title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" ></iframe>
+                                    </div>
                             </div>
                         </div>
                     </div>

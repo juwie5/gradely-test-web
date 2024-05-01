@@ -1,5 +1,5 @@
 <template>
-  <nav class="hidden lg:block w-full bg-white sticky top-0 z-10 drop-shadow-md">
+  <nav class="hidden lg:block w-full bg-white fixed top-0 z-10 drop-shadow-md">
     <div class="container flex justify-between py-5 items-center">
       <div>
         <NuxtLink :to="urls.home">
@@ -27,8 +27,8 @@
               <NuxtLink :to="urls.exams" class="text-xs font-light text-[#757575]">Prepare & Track your exam readiness</NuxtLink>
             </li>
             <li class="flex flex-col">
-              <NuxtLink :to="urls.summer_school" class="text-[#113255] text-sm font-medium">Coding School</NuxtLink>
-              <NuxtLink :to="urls.summer_school" class="text-xs font-light text-[#757575]">Learn to code in a fun way</NuxtLink>
+              <NuxtLink :to="urls.coding" class="text-[#113255] text-sm font-medium">Coding School</NuxtLink>
+              <NuxtLink :to="urls.coding" class="text-xs font-light text-[#757575]">Learn to code in a fun way</NuxtLink>
             </li>
           </div>
         </div>
@@ -51,8 +51,8 @@
               <NuxtLink :to="urls.about" class="text-xs font-light text-[#757575]">Learn more about us, our Mission & Vision</NuxtLink>
             </li>
             <li  class="flex flex-col">
-              <NuxtLink :to="urls.blog" href="examPrep.html" class="text-[#113255] text-sm font-medium">Blog</NuxtLink>
-              <NuxtLink :to="urls.blog" class="text-xs font-light text-[#757575]">Read about latest trends in education</NuxtLink>
+              <NuxtLink :to="urls.blog"  target="_blank" class="text-[#113255] text-sm font-medium">Blog</NuxtLink>
+              <NuxtLink :to="urls.blog"  target="_blank" class="text-xs font-light text-[#757575]">Read about latest trends in education</NuxtLink>
             </li>
             <li  class="flex flex-col">
               <NuxtLink :to="urls.help" class="text-[#113255] text-sm font-medium">Help Center</NuxtLink>
@@ -87,7 +87,7 @@
       </div>
     </div>
   </nav>
-  <nav class="lg:hidden w-full sticky bg-white  top-0 z-10">
+  <nav class="lg:hidden w-full fixed bg-white  top-0 z-10 drop-shadow-md">
     <div class="container flex justify-between py-5 items-center">
       <div>
         <NuxtLink :to="urls.home">
@@ -162,7 +162,7 @@
             <NuxtLink :to="urls.about" class="text-[#113255] text-sm font-medium">About Us</NuxtLink>
           </div>
           <div class="py-2">
-            <NuxtLink :to="urls.blog" class="text-[#113255] text-sm font-medium">Blog</NuxtLink>
+            <NuxtLink :to="urls.blog" target="_blank" class="text-[#113255] text-sm font-medium">Blog</NuxtLink>
           </div>
           <div class="">
             <NuxtLink :to="urls.help" class="text-[#113255] text-sm font-medium">Help Center</NuxtLink>

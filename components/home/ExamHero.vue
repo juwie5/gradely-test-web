@@ -1,7 +1,7 @@
 <template>
     <div class="w-full relative bg-local bg-no-repeat bg-contain bg-[#F5FEF9]"
         style="background-image: url('/img/bgWave.png');">
-        <div class="container">
+        <div class="container mt-20">
             <div class="grid lg:grid-cols-2 w-full">
                 <div class="mt-24">
                     <h2

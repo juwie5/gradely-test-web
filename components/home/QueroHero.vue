@@ -1,23 +1,23 @@
 <template>
     <div class="image-background">
-        <div class="container">
+        <div class="container mt-20">
             <div class="flex flex-col w-full">
                 <div class="flex flex-col items-center justify-center pt-28 lg:pt-72">
                     <h1 class="text-3xl lg:text-5xl text-center text-[#113255] font-bold leading-[2.719rem] lg:leading-[4.35rem]">Fun, Personalized
                         Programming Classes <br></br> for Students Aged 8-13</h1>
-                    <p class="text-xl text-center text-[#353535] mt-2.5 font-normal">Equip your kids with valuable
+                    <p class="text-base lg:text-xl text-center text-[#353535] mt-2.5 font-normal">Equip your kids with valuable
                         coding skills and watch them thrive in <br></br> school and life with our fun and engaging
                         coding classes</p>
-                    <div class="flex flex-col lg:flex-row items-center mt-5">
+                    <div class="flex flex-col lg:gap-12 lg:flex-row items-center mt-5">
                         <div>
                             <img src="@/assets/icons/queroLogo.svg">
                         </div>
-                        <UiButton secondary>
-                           <div class="flex items-center gap-1">
-                            Get Started 
-                            <img src="@/assets/icons/arrow-right-line.svg" alt="">
-                           </div> 
-                        </UiButton>
+                        <button @click="openModal" class="bg-[#FAA017] hover:bg-[#11BDCF] px-5 py-3.5 transition-all rounded-[2.188rem]">
+                            <div class="flex items-center justify-center gap-2.5">
+                                <p class="uppercase text-base font-bold text-[#113255]">Get Started </p>
+                               <img src="@/assets/icons/arrow-right-line.svg" alt="">
+                            </div>
+                        </button>
                     </div>
                 </div>
                 <div class="flex items-center mt-16">
@@ -50,6 +50,7 @@
                     </div>
                 </div>
             </div>
+            <UiModal :is-open="modal" @close="modal = false"/>
         </div>
     </div>
 </template>
@@ -57,6 +58,7 @@
 import { z } from "zod"
 import type { FormSubmitEvent } from "#ui/types"
 import { urls } from "~/assets/urls";
+import {ref} from 'vue';
 
 const schema = z.object({
     phone_number: z.string().refine((value) => /^(?:(?:\+|0{0,2})44\s?|(?:\((?=\+?44\))\+?44\)|0)?)\s?(?:(?:\d{5}\s?\d{5})|(?:\d{4}\s?\d{6})|(?:\d{3}\s?\d{4}\s?\d{4})|(?:\d{5}\s?\d{4})|(?:\d{4}\s?\d{3}\s?\d{3})|(?:\d{3}\s?\d{3}\s?\d{4}))$/.test(value), "Provide a valid UK phone number"),
@@ -67,6 +69,7 @@ const state = reactive({
     phone_number: undefined,
     loading: false,
 })
+
 
 async function onSubmit(event: FormSubmitEvent<Schema>) {
     state.loading = true;
@@ -79,9 +82,15 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 
     navigateTo(urls.contact_whatsapp, { external: true });
 }
+ 
+let modal = ref(false)
+
+const openModal = () => {
+    modal.value = !modal.value 
+}
 </script>
 
-<style>
+<style scoped>
 .image-background{
     width: 100%;
     position: relative;

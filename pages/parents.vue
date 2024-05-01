@@ -121,10 +121,10 @@
         </section>
         <section class="container my-16">
             <div class="">
-                <h2 class="text-3xl mb-5 text-center font-semibold text-[#113255] tracking-tighter">
+                <h2 class="text-2xl lg:text-3xl mb-5 text-center font-semibold text-[#113255] tracking-tighter">
                     Frequently Asked Questions
                 </h2>
-                <div class="mx-auto lg:w-9/12 mb-5 space-y-5">
+                <div class="mx-auto lg:w-9/12 mb-5 space-y-3">
                     <UiFaq :faqs="faqs" />
                     <div class="my-8">
                         <div class="my-3">

@@ -1,7 +1,7 @@
 <template>
     <div class="w-full relative bg-local bg-no-repeat bg-contain bg-[#FEF7ED]"
       style="background-image: url('/img/bgWave.png');">
-      <div class="container pt-8">
+      <div class="container mt-20 pt-8">
         <div class="grid lg:grid-cols-2 w-full">
           <div class="mt-16">
             <h2
@@ -18,7 +18,7 @@
             </div>
           </div>
           <div class="flex items-center mt-9">
-           <img src="/img/parent-hero.png" fit="inside"/>  
+           <NuxtImg src="/img/parent-hero.png" fit="inside"/>  
           </div>
         </div>
       </div>

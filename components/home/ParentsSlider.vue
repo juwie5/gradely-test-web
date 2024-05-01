@@ -15,7 +15,7 @@
                                 </svg>
                             </span>
                         </div>
-                        <img :src="`${item.thumbnail}`"
+                        <NuxtImg :src="`${item.thumbnail}`"
                             class="rounded-[15px] object-cover h-full w-full hover:bg-[rgba(0, 0, 0, 0.5)]" />
                     </div>
                     <div v-if="parents" class="mt-2">
@@ -39,7 +39,7 @@
                                 </svg>
                             </span>
                         </div>
-                        <img :src="`${item.thumbnail}`"
+                        <NuxtImg :src="`${item.thumbnail}`"
                             class="rounded-[15px] object-cover h-full w-full hover:bg-[rgba(0, 0, 0, 0.5)]" />
                     </div>
                     <div v-if="parents" class="mt-2">
@@ -51,28 +51,36 @@
 
         </section>
 
-        <section v-if="isOpen">
-            <div class="fixed top-0 left-0 w-full h-full flex items-center justify-center modal fade">
-                <div class="modal-dialog modal-dialog-centered mediaRenderDialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <div class="dialogDismiss">
-                                <button type="button" class="close_dialog" @click="closeModal"></button>
+        <Teleport to="body">
+            <section v-if="isOpen">
+                <div class="fixed top-0 left-0 w-full h-full flex items-center justify-center modal fade">
+                    <div class="modal-dialog modal-dialog-centered mediaRenderDialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <div class="dialogDismiss">
+                                    <button type="button" class="close_dialog" @click="closeModal"></button>
+                                </div>
                             </div>
-                        </div>
-                        <div class="modal-body mediaRenderDialogbody">
-                            <div class="content_wrapper">
-                                <div class="embed-responsive embed-responsive-16by9">
-                                    <iframe width="760" height="515" class="embed-responsive-item"
+                            <div class="modal-body mediaRenderDialogbody">
+                                <div class="content_wrapper">
+                                    <div class="hidden lg:block embed-responsive embed-responsive-16by9">
+                                        <iframe width="760" height="515" class="embed-responsive-item"
+                                            :src="`${selectedVideo}`" title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"></iframe>
+                                    </div>
+                                    <div class="flex items-center justify-center md:hidden">
+                                        <iframe width="342" height="208" class="embed-responsive-item"
                                         :src="`${selectedVideo}`" title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"></iframe>
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" ></iframe>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </Teleport>
+
 
     </section>
 
@@ -147,13 +155,13 @@ const closeModal = (item) => {
     animation: marquee 25s infinite linear;
 }
 
-.parent-slider__container > div {
+.parent-slider__container>div {
     width: 16vw;
     min-width: 340px;
     aspect-ratio: 340/195;
 }
 
-.parent-slider:nth-child(odd) .parent-slider__container > div  {
+.parent-slider:nth-child(odd) .parent-slider__container>div {
     transform: translateX(-50%);
 }
 

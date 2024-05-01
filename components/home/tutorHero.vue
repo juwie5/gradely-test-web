@@ -1,8 +1,8 @@
 <template>
     <div class="w-full relative bg-local bg-no-repeat bg-contain"
       style="background-image: url('/img/hero-decore.svg'); background-position: right -7rem;">
-      <div class="container mb-16">
-        <div class="grid lg:grid-cols-2 w-full">
+      <div class="container my-16">
+        <div class="grid lg:grid-cols-2 w-full my-12 py-12">
           <div class="my-20">
             <h2
               class="text-3xl xl:text-5xl lg:w-full text-[#113255] xl:leading-[65.38px]  tracking-tight font-bold mb-5 text-balance">

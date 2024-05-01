@@ -241,11 +241,11 @@
        
       </div>
       <div class="shrink px-3  lg:py-10">
-          <div class="border-b border-[#0000001A] flex items-center justify-between">
+          <div class="border-b border-[#0000001A] flex items-center justify-between" @click="handleActiveTab(0)">
             <h3 class="text-base mb-4 text-[#004680] font-semibold text-nowrap">
             Inside Gradely
             </h3>
-            <NuxtImg src="/img/chevron-down.svg" class="w-6" @click="handleActiveTab(0)"/>
+            <NuxtImg src="/img/chevron-down.svg" class="w-6" />
           </div>
          
           <div class="space-y-5 mt-4 transition-all duration-300 delay-150 " v-if="show">
@@ -282,12 +282,12 @@
           </div>
         </div>
       <div class="shrink px-3  lg:py-10">
-        <div class="border-b border-[#0000001A] flex items-center justify-between">
+        <div class="border-b border-[#0000001A] flex items-center justify-between" @click="handleActiveTab(1)" >
             <h3 class="text-base mb-4 text-[#004680] font-semibold text-nowrap">
               Products
             </h3>
-            <NuxtImg src="/img/chevron-down.svg" class="w-6" @click="handleActiveTab(1)" />
-          </div>
+            <NuxtImg src="/img/chevron-down.svg" class="w-6" />
+        </div>
         <div class="space-y-5 mt-4 transition-all duration-300 delay-150" v-if="show1">
           <NuxtLink
             :to="urls.for_schools"
@@ -316,12 +316,12 @@
         </div>
       </div>
       <div class="shrink px-3 lg:py-10">
-        <div class="border-b border-[#0000001A] flex items-center justify-between">
+        <div class="border-b border-[#0000001A] flex items-center justify-between" @click="handleActiveTab(2)">
             <h3 class="text-base mb-4 text-[#004680] font-semibold text-nowrap">
               Support
             </h3>
-            <NuxtImg src="/img/chevron-down.svg" class="w-6" @click="handleActiveTab(2)" />
-          </div>
+            <NuxtImg src="/img/chevron-down.svg" class="w-6"  />
+        </div>
         <div class="space-y-5 mt-4 transition-all duration-300 delay-150" v-if="show2">
           <NuxtLink
             :to="urls.contact_us"
@@ -350,11 +350,11 @@
         </div>
       </div>
       <div class="shrink px-3 lg:py-10">
-        <div class="border-b border-[#0000001A] flex items-center justify-between">
+        <div class="border-b border-[#0000001A] flex items-center justify-between"  @click="handleActiveTab(3)">
             <h3 class="text-base mb-4 text-[#004680] font-semibold text-nowrap">
               Contact
             </h3>
-            <NuxtImg src="/img/chevron-down.svg" class="w-6"  @click="handleActiveTab(3)"/>
+            <NuxtImg src="/img/chevron-down.svg" class="w-6" />
         </div>
         <div class="space-y-5 mt-4 transition-all duration-300 delay-150" v-if="show3">
           <NuxtLink

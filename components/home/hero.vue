@@ -2,8 +2,8 @@
   <div class="w-full relative bg-local bg-no-repeat bg-contain bg-[#FDF0F1]"
     style="background-image: url('/img/bgWave.png');">
     <div class="container mb-16">
-      <div class="grid lg:grid-cols-2 w-full">
-        <div class="my-24 order-last lg:order-none">
+      <div class="grid lg:grid-cols-2 w-full mt-20 mb-12 py-24">
+        <div class="pt-4 lg:pt-32 order-last lg:order-none">
           <h2
             class="text-3xl xl:text-5xl lg:w-full text-[#113255] xl:leading-[65.38px]  tracking-tight font-bold mb-5 text-balance">
             Personalise learning and see improvement <br></br> <span class="text-[#FAA017]"> in 4 weeks!</span>
@@ -18,8 +18,8 @@
            <UiGoogleAppleButton :google="true"/>
           </div>
         </div>
-        <div class="flex items-center mt-16">
-         <img src="/img/homeHero_anim.gif" fit="inside"  class="w-[40rem]"/>
+        <div class="flex items-center">
+         <NuxtImg src="/img/homeHero_anim.gif" fit="inside"  class="w-[40rem]"/>
         </div>
       </div>
     </div>

@@ -21,7 +21,7 @@
         <img class="w-42" src="assets/icons/cnn.svg" />
       </div>
       <div class="mt-20">
-        <h3 class="text-5xl mb-4 font-bold tracking-tighter text-[#113255]">
+        <h3 class="text-3xl lg:text-5xl mb-4 font-bold tracking-tighter text-[#113255]">
           How it works
         </h3>
         <p class="mb-8 text-base font-normal text-gray-700">
@@ -98,10 +98,10 @@
         text="Create an easier and more effective teaching experience for you and your students with the right tools and resources, online or offline." />
     </section>
     <section class="container my-16">
-      <h4 class="text-[2rem] mb-2 text-center lg:mt-0 font-bold tracking-tight text-[#113255]">
+      <h4 class="text-2xl lg:text-[2rem] mb-2 text-center lg:mt-0 font-bold tracking-tight text-[#113255]">
         Over 3000 fun and interactive video lessons <br></br> across all topics
       </h4>
-      <p class="text-[21px] font-normal text-gray-700 mb-7 text-center">
+      <p class="text-base lg:text-[21px] font-normal text-gray-700 mb-7 text-center">
         Learn or relearn your subject topics with our library of well illustrated pre- <br></br>recorded video lessons
         in core subjects.
       </p>

@@ -52,15 +52,15 @@
                             <p class="text-base font-normal text-[#555555] mb-2">Signup at <span class="underline">
                                     app.gradely.co/student</span> to access our <br></br> enrollment form
                             </p>
-                            <UiButton secondary>
-                                <div class="flex items-center gap-1">
+                            <UiButton secondary @click="openModal">
+                                <div class="flex items-center gap-1 uppercase">
                                     Get Started
                                     <img src="@/assets/icons/arrow-right-line.svg" alt="">
                                 </div>
                             </UiButton>
                         </div>
                     </div>
-                    <div class="flex my-3">
+                    <div class="flex my-5">
                         <div class="frameWorkItemFig shrink-0 relative mr-5">
                             <img src="/img/02.svg" alt="">
                         </div>
@@ -69,7 +69,7 @@
                                  basic information about your child. </p>
                         </div>
                     </div>
-                    <div class="flex my-4">
+                    <div class="flex my-5">
                         <div class="shrink-0 relative mr-5">
                             <img src="/img/03.svg" alt="">
                         </div>
@@ -77,9 +77,9 @@
                             <p class="text-base font-normal text-[#555555] mb-2">We'll take care of the rest! Once you submit the form, <br></br> we'll be in touch to confirm your child’s spot and answer any questions.</p>
                         </div>
                     </div>
-
                 </div>
             </div>
+            <UiModal :is-open="modal" @close="modal = false"/>
         </section>
         <section class="container my-16">
             <div class="">
@@ -102,7 +102,8 @@
 import { urls } from "~/assets/urls";
 import type { Testimony } from "~/components/home/testimonies.vue";
 import type { Faq } from "~/components/ui/faq.vue";
-import slider from "~/components/home/slider.vue"
+import slider from "~/components/home/slider.vue";
+import {ref} from 'vue';
 
 const faqs: Faq[] = [
     {
@@ -158,6 +159,12 @@ const testimonies: Testimony[] = [
         percenatage: 93
     },
 ];
+
+let modal = ref(false)
+
+const openModal = () => {
+    modal.value = !modal.value 
+}
 </script>
 
 
@@ -171,7 +178,7 @@ const testimonies: Testimony[] = [
 }
 
 .frameWorkItemFig::before {
-    height: 70px;
+    height: 90px;
     content: "";
     display: block;
     width: 1px;

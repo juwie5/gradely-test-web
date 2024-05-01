@@ -10,10 +10,10 @@
       <div v-if="label" :style="{'background-color':color}" class="rounded-[40px] px-4 py-2 w-40 mt-4 lg:mt-0">
         <p class="uppercase text-center text-base text-[#113255] font-bold">{{ label }}</p>
       </div>
-      <h4 class="text-[2rem] mb-3 lg:mb-8 mt-8 lg:mt-0 font-bold tracking-tight text-[#113255] text-balance">
+      <h4 class="text-[1.313rem] lg:text-[2rem] mb-3 lg:mb-8 mt-8 lg:mt-0 font-bold tracking-tight text-[#113255] text-balance">
         {{ title }}
       </h4>
-      <p class="text-base font-light text-[#555555]">
+      <p class="text-base font-normal text-[#555555]">
         {{ text }}
       </p>
       <div v-if="learn" class="flex justify-center border-2 border-[#D5D5D5] rounded-[40px] px-4 py-2 w-40 mt-8 cursor-pointer hover:bg-[#dbf5f8] hover:border-transparent hover:shadow-lg hover:shadow-slate-400/50">

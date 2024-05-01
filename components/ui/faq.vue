@@ -2,7 +2,7 @@
   <dl
     v-for="(faq, index) in faqs"
     :key="index"
-    class="p-5 bg-gray-100 rounded"
+    class="p-5 bg-[#F5F5F5] rounded"
   >
     <dt class="text-base mb-1 text-[#004680] font-medium">
       {{ faq.question }}

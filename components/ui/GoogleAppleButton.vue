@@ -22,7 +22,7 @@
                 </div>
             </div>
         </div>
-        <div v-if="web" class="flex items-center justify-center gap-4 rounded-[10px] bg-[#113255] w-[160px] p-1">
+        <div v-if="web" class="hidden lg:flex items-center justify-center gap-4 rounded-[10px] bg-[#113255] w-[160px] p-1 ">
             <div>
                 <img src="assets/icons/world.svg" alt="">
             </div>
