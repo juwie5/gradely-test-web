@@ -15,7 +15,7 @@
                                 </svg>
                             </span>
                         </div>
-                        <NuxtImg :src="`${item.thumbnail}`"
+                        <img :src="`${item.thumbnail}`"
                             class="rounded-[15px] object-cover h-full w-full hover:bg-[rgba(0, 0, 0, 0.5)]" />
                     </div>
                     <div v-if="parents" class="mt-2">
