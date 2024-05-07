@@ -60,7 +60,7 @@
                             </UiButton>
                         </div>
                     </div>
-                    <div class="flex my-5">
+                    <div class="flex my-6">
                         <div class="frameWorkItemFig shrink-0 relative mr-5">
                             <img src="/img/02.svg" alt="">
                         </div>
@@ -69,7 +69,7 @@
                                  basic information about your child. </p>
                         </div>
                     </div>
-                    <div class="flex my-5">
+                    <div class="flex mt-9 mb-6">
                         <div class="shrink-0 relative mr-5">
                             <img src="/img/03.svg" alt="">
                         </div>

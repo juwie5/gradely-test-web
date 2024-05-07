@@ -35,7 +35,7 @@
            </NuxtLink>
           </div>
           <div class="flex items-center">
-            <NuxtImg src="/img/heroImage2.png" fit="inside"
+            <img src="/img/heroImage2.png" fit="inside"
               class="mx-auto w-full lg:-mt-10 lg:w-[90%] h-auto select-none pointer-events-none" />
           </div>
         </div>

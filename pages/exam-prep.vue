@@ -71,7 +71,7 @@
           </div>
         </div>
         <div>
-          <NuxtImg src="/img/exam-how-to.png" fit="inside" class="w-[30rem]" />
+          <img src="/img/exam-how-to.png" fit="inside" class="w-[30rem]" />
         </div>
       </div>
     </section>

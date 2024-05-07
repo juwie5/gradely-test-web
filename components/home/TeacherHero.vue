@@ -21,7 +21,7 @@
                     </div>
                 </div>
                 <div class="flex items-center mt-16 z-10 lg:z-0">
-                    <NuxtImg src="/img/teacher-hero.png" fit="inside" class="" />
+                    <img src="/img/teacher-hero.png" fit="inside" class="" />
                 </div>
                  <div class="absolute -right-[13rem] lg:-right-24  -top-[3rem] lg:top-4 ">
                     <img class="w-1/2" src="/img/u-clubs.png" />
