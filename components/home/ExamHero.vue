@@ -3,7 +3,7 @@
         style="background-image: url('/img/bgWave.png');">
         <div class="container mt-20">
             <div class="grid lg:grid-cols-2 w-full">
-                <div class="mt-24">
+                <div class="my-16 lg:mt-24 order-last lg:order-none">
                     <h2
                         class="text-3xl xl:text-[2.5rem] lg:w-full text-[#113255] xl:leading-[65.38px]  tracking-tight font-normal mb-5 text-balance">
                         Excel at your Common Entrance, WAEC, IGCSE and SAT exams with Gradely

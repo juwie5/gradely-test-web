@@ -31,8 +31,8 @@
                     <p class="uppercase text-center text-base text-[#113255] font-bold">Video Lessons</p>
                 </div>
                 <div>
-                    <h4 class="text-3xl mb-4 font-bold text-[#113255]">Learn difficult topics with video lessons</h4>
-                    <p class="text-[21px] font-normal text-[#555555]">Find well illustrated and interactive videos
+                    <h4 class="text-xl lg:text-3xl mb-4 font-bold text-[#113255]">Learn difficult topics with video lessons</h4>
+                    <p class="text-base lg:text-xl font-normal text-[#555555]">Find well illustrated and interactive videos
                         lessons on different topics to help you learn in a fun and engaging way</p>
                 </div>
             </div>

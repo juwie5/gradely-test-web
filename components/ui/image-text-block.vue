@@ -7,7 +7,7 @@
       <NuxtImg class="block w-full select-none pointer-events-none lg:w-auto lg:h-[20rem]" :src="imageUrl" />
     </div>
     <div class="flex flex-col justify-center lg:w-[30rem]">
-      <div v-if="label" :style="{'background-color':color}" class="rounded-[40px] px-4 py-2 w-40 mt-4 lg:mt-0">
+      <div v-if="label" :style="{'background-color':color,'width': size}"  class="rounded-[40px] px-4 py-2 w-40 mt-4 lg:mt-0">
         <p class="uppercase text-center text-base text-[#113255] font-bold">{{ label }}</p>
       </div>
       <h4 class="text-[1.313rem] lg:text-[2rem] mb-3 lg:mb-8 mt-8 lg:mt-0 font-bold tracking-tight text-[#113255] text-balance">
@@ -32,7 +32,7 @@ interface ImageTextBlockProps {
   color?: string;
   label?: string;
   learn?: string;
-  
+  size?: string; 
 }
 
 defineProps<ImageTextBlockProps>()

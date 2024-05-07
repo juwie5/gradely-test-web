@@ -30,38 +30,41 @@
     <section class="container mt-8">
       <div class="flex flex-col lg:flex-row justify-center items-center gap-8">
         <div>
-          <h3 class="text-3xl lg:text-5xl text-[#113255] font-bold text-center">
+          <h3 class="text-xl lg:text-5xl text-[#113255] font-bold text-center">
             How it works
           </h3>
           <div class="flex flex-col gap-5 mt-8">
-            <div class="w-full border hover:border-[#D5D5D5] p-5 rounded-2xl flex justify-between items-center gap-2">
-              <div class="bg-[#FAA017] w-16 h-16 rounded-[20px]">
+            <div class="w-full border hover:border-[#D5D5D5] p-5 rounded-2xl flex justify-between items-center gap-5">
+              <div class="w-16 h-16 rounded-[20px]">
+                <img src="/img/exam-practise.svg" alt="">
               </div>
-              <div>
-                <p class="text-lg font-normal text-[#353535]">Practice from 30,000 authentic past questions <br></br> in
-                  any subject and exam of your choice</p>
+              <div class="w-full lg:w-[25rem]">
+                <p class="text-sm lg:text-lg font-normal text-[#353535]">Practice from 30,000 authentic past questions in
+                any subject and exam of your choice</p>
               </div>
-              <div>
+              <div class="hidden lg:block">
                 <img src="@/assets/icons/arrow-right.svg" alt="">
               </div>
             </div>
-            <div class="w-full border hover:border-[#D5D5D5] p-5 rounded-2xl flex justify-between items-center gap-2">
-              <div class="bg-[#11BDCF] w-16 h-16 rounded-[20px]">
+            <div class="w-full border hover:border-[#D5D5D5] p-5 rounded-2xl flex justify-between items-center gap-5">
+              <div class="w-16 h-16 rounded-[20px]">
+                <img src="/img/exam-review.svg" alt="">
               </div>
-              <div>
-                <p>Review your result and watch explainer videos <br></br> for each question you missed.</p>
+              <div class="w-full lg:w-[24rem]">
+                <p class="text-sm lg:text-lg font-normal text-[#353535]">Review your result and watch explainer videos for each question you missed.</p>
               </div>
-              <div>
+              <div class="hidden lg:block">
                 <img src="@/assets/icons/arrow-right.svg" alt="">
               </div>
             </div>
-            <div class="w-full border hover:border-[#D5D5D5] p-5 rounded-2xl flex justify-between items-center gap-2">
-              <div class="bg-[#F6515B] w-16 h-16 rounded-[20px]">
+            <div class="w-full border hover:border-[#D5D5D5] p-5 rounded-2xl flex justify-between items-center gap-5">
+              <div class="w-16 h-16 rounded-[20px]">
+                <img src="/img/exam-video.svg" alt="">
               </div>
-              <div>
-                <p>Attend group or private tutoring sessions for <br></br> live feedback from expert tutors.</p>
+              <div class="w-full lg:w-[24rem]">
+                <p class="text-sm lg:text-lg font-normal text-[#353535]">Attend group or private tutoring sessions for  live feedback from expert tutors.</p>
               </div>
-              <div>
+              <div class="hidden lg:block">
                 <img src="@/assets/icons/arrow-right.svg" alt="">
               </div>
             </div>
@@ -73,7 +76,7 @@
       </div>
     </section>
     <section class="container my-16">
-      <h4 class="text-[32px] mb-2 text-center lg:mt-0 font-bold tracking-tight text-[#113255]">
+      <h4 class="text-xl lg:text-3xl mb-2 text-center lg:mt-0 font-bold tracking-tight text-[#113255]">
         Benefits & Pricing
       </h4>
       <div class="flex flex-col lg:flex-row gap-8 mt-12">
@@ -178,7 +181,7 @@
     <section class="container my-16">
       <div class="text-center">
         <h4
-          class="text-[2rem] lg:text-5xl mb-2 text-center lg:mt-0 font-bold tracking-tight text-[#113255] lg:leading-[65.38px]">
+          class="text-xl lg:text-5xl mb-2 text-center lg:mt-0 font-bold tracking-tight text-[#113255] lg:leading-[65.38px]">
           Our students have nothing but <br></br> love for us
         </h4>
       </div>
@@ -253,14 +256,14 @@
     </section>
     <section class="container my-16">
       <div class="">
-        <h2 class="text-2xl lg:text-3xl mb-5 text-center font-semibold text-[#113255] tracking-tighter">
+        <h2 class="text-xl lg:text-3xl mb-5 text-center font-semibold text-[#113255] tracking-tighter">
           Frequently Asked Questions
         </h2>
         <div class="mx-auto lg:w-9/12 mb-5 space-y-3">
           <UiFaq :faqs="faqs" />
           <div class="my-8">
-            <div class="my-3">
-              <h5 class="text-3xl text-[#113255] font-normal">Need Help?</h5>
+            <div class="my-8 lg:my-4">
+              <h5 class="text-2xl lg:text-3xl text-[#113255] font-normal">Need Help?</h5>
               <p class="text-base font-light text-[#555555]">We’re available to answer your questions and
                 support your onboarding process.</p>
             </div>

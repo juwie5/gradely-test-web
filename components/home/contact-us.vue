@@ -9,7 +9,7 @@
       </div>
     </div>
     <div>
-      <div class="my-3 lg:mt-0 font-semibold text-[#113255] text-2xl">
+      <div class="my-3 lg:my-3 font-semibold text-[#113255] text-2xl lg:text-3xl">
         Need Help?
       </div>
       <div v-if="summer" class="text-base mb-4 text-gray-700">

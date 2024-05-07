@@ -138,7 +138,7 @@
             <NuxtLink :to="urls.exams" class="text-[#113255] text-sm font-medium">Exam Prep</NuxtLink>
           </div>
           <div class="py-2">
-            <NuxtLink :to="urls.summer_school" class="text-[#113255] text-sm font-medium py-2">Coding School
+            <NuxtLink :to="urls.coding" class="text-[#113255] text-sm font-medium py-2">Coding School
             </NuxtLink>
           </div>
         </div>

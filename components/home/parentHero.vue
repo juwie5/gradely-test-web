@@ -3,7 +3,7 @@
       style="background-image: url('/img/bgWave.png');">
       <div class="container mt-20 pt-8">
         <div class="grid lg:grid-cols-2 w-full">
-          <div class="mt-16">
+          <div class="my-16 lg:mt-16 order-last lg:order-none">
             <h2
               class="text-3xl xl:text-5xl lg:w-full text-[#113255] xl:leading-[65.38px]  tracking-tight font-bold mb-5 text-balance">
               Master difficult topics. <br></br> 
@@ -17,7 +17,7 @@
              <UiGoogleAppleButton :google="true"/>
             </div>
           </div>
-          <div class="flex items-center mt-9">
+          <div class="flex items-center mt-3 lg:mt-9">
            <img src="/img/parent-hero.png" fit="inside"/>  
           </div>
         </div>

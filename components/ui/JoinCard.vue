@@ -21,7 +21,7 @@
                              <h6 class="text-[#004680] text-xl lg:text-3xl">686,944</h6>
                         </div>
                     </div>
-                    <div class="flex flex-col items-center md:flex-row gap-4">
+                    <div class="flex items-center flex-row gap-4">
                         <UiGoogleAppleButton :apple="true" />
                         <UiGoogleAppleButton :google="true" />
                     </div>
