@@ -25,8 +25,7 @@
           How it works
         </h3>
         <p class="mb-8 text-base font-normal text-gray-700">
-          According to a study by 8 professors from the University of Oxford, Gradely <br></br> improves grades by 50%
-          in 3 months.
+          Gradely uses technology to implement Mastery Learning (Benjamin Bloom, 1984) <br></br> by creating unique learning paths for each student.
         </p>
       </div>
       <div class="relative">
@@ -39,7 +38,7 @@
           </div>
           <div class="grow">
             <h4 class="text-base lg:text-2xl font-bold text-[#113255]">Adaptive Assessment</h4>
-            <p class="text-base font-light text-[#555555]">Student takes homework or <br></br> practice test</p>
+            <p class="text-base font-light text-[#555555]">Student takes practice to identify <br></br>learning gaps</p>
           </div>
         </div>
 
@@ -59,7 +58,7 @@
           </div>
           <div class="grow">
             <h4 class="text-base lg:text-2xl font-bold text-[#113255]">Better Results</h4>
-            <p class="hidden lg:block text-base font-light text-[#555555]">Watches recommended video <br></br> lessons</p>
+            <p class="hidden lg:block text-base font-light text-[#555555]">Attains mastery and moves on to <br></br> subsequent topics</p>
             <p class="lg:hidden text-base font-light text-[#555555]">Watches recommended video lessons</p>
           </div>
         </div>
@@ -163,34 +162,27 @@ const faqs: Faq[] = [
 ]
 
 const testimonies: Testimony[] = [
-  {
+{
     name: "Femi Ibiwoye",
-    child: "Diamond",
-    text: "This is the testimonial excerpt from the user’s testimonial video to the right. It circles round each highlighted parent.",
+    location: "Newport Southwales,UK",
+    text: "Mayokun looks forward to every class with her tutors. I will say she is now more confident in reading big grammars, 100% in English, and 80% in math.",
     keyStage: "Key Stage 2",
     percenatage: 93
   },
   {
     name: "Esther Umoh",
-    child: "Diamond",
-    text: "This is the testimonial excerpt from the user’s testimonial video to the right. It circles round each highlighted parent.",
+    location: "Newport Southwales,UK",
+    text: "I would say there's been a 50% improvement for both English and math, and the teachers are really great. Their patience with Fikayo's excesses is commendable. I appreciate them",
     keyStage: "Key Stage 2",
     percenatage: 93
   },
   {
     name: "Lanre Oshilaja",
-    child: "Diamond",
-    text: "This is the testimonial excerpt from the user’s testimonial video to the right. It circles round each highlighted parent.",
+    location: "Lagos, Nigeria",
+    text: "She has improved greatly in Mathematics",
     keyStage: "A Levels",
     percenatage: 93
-  },
-  {
-    name: "Lanre Oshilaja",
-    child: "Diamond",
-    text: "This is the testimonial excerpt from the user’s testimonial video to the right. It circles round each highlighted parent.",
-    keyStage: "A Levels",
-    percenatage: 93
-  },
+  }
 ];
 
 const bookASession = () =>{

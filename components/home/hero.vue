@@ -9,8 +9,7 @@
             Personalise learning and see improvement <br></br> <span class="text-[#FAA017]"> in 4 weeks!</span>
           </h2>
           <div>
-            <p class="text-base font-normal text-[#353535]">Students have improved over 50% or at least by one grade
-              <br></br> level after 20 hours of using Gradely</p>
+            <p class="text-base font-normal text-[#353535]">Students have been shown to improve by up to a grade level after <br></br> 20 hours of using Gradely</p>
             <h4 class="font-bold uppercase my-7 text-base text-[#F6515B]">for Primary & Secondary students</h4>
           </div>
           <div class="flex gap-4">

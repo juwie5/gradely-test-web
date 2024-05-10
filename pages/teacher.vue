@@ -15,6 +15,9 @@
         <div aria-hidden
             class="bg-local bg-no-repeat bg-contain absolute top-[3700px] right-0 w-[520px] h-[520px] pointer-events-none"
             style="background-image: url('/img/ellipse-4.svg'); background-position: top right;" />
+            <div aria-hidden
+            class="bg-local bg-no-repeat bg-contain absolute top-[3060px] right-1/2 w-[520px] h-[520px] pointer-events-none"
+            style="background-image: url('/img/ellipse-full.svg'); background-position: center;" />
         <HomeNavbar />
         <HomeTeacherHero />
         <section class="container mt-8">
@@ -59,14 +62,17 @@
             </div>
         </section>
         <section class="container my-16">
-            <div>
+            <div class="relative">
                 <div class="mb-10">
                     <h5 class="text-3xl lg:text-5xl font-bold text-[#113255]">
                         What Our <br></br> Teachers Say
                     </h5>
                 </div>
+                <div class="absolute top-6 -right-80">
+                    <img class="w-2/6 lg:w-1/2" src="/img/left-strokes.png" alt="">
+                </div>
                 <div class="flex flex-col-reverse lg:flex-row w-full items-center gap-14">
-                    <div class="min-w-80 w-80">
+                    <div v-if="show" class="min-w-80 w-80">
                         <img src="/img/blue-quote.svg" alt="">
                         <p class="mt-4 text-xl text-[#353535] font-normal">This is the testimonial excerpt from the
                             parent testimonial video to the right. It circles round each highlighted parent.</p>
@@ -75,8 +81,26 @@
                             <p class="text-base font-normal text-[#757575]">Glisten Intl. College, Abuja</p>
                         </div>
                     </div>
+                    <div v-if="show1" class="min-w-80 w-80">
+                        <img src="/img/blue-quote.svg" alt="">
+                        <p class="mt-4 text-xl text-[#353535] font-normal">This is the testimonial excerpt from the
+                            parent testimonial video to the right. It circles round each highlighted parent.</p>
+                        <div class="mt-7">
+                            <h6 class="text-xl font-bold text-[#113255]">Adegbile Jospeh</h6>
+                            <p class="text-base font-normal text-[#757575]">Maypride Schhols, Lagos</p>
+                        </div>
+                    </div>
+                    <div v-if="show2" class="min-w-80 w-80">
+                        <img src="/img/blue-quote.svg" alt="">
+                        <p class="mt-4 text-xl text-[#353535] font-normal">This is the testimonial excerpt from the
+                            parent testimonial video to the right. It circles round each highlighted parent.</p>
+                        <div class="mt-7">
+                            <h6 class="text-xl font-bold text-[#113255]">Demola Bello</h6>
+                            <p class="text-base font-normal text-[#757575]">Caleb Intl. College, Abuja</p>
+                        </div>
+                    </div>
                     <div class="flex items-center justify-between gap-4">
-                        <div class="image-card">
+                        <div :class="[activeTab === 1 ? 'image-card-active' : 'image-card']" @click="handleActiveTab(1)">
                             <img class="" src="/img/testimonial-1.png" alt="">
                             <button>
                                 <div class="circle">
@@ -92,7 +116,7 @@
                                 </div>
                             </button>
                         </div>
-                        <div class="image-card">
+                        <div :class="[activeTab === 2 ? 'image-card-active' : 'image-card']" @click="handleActiveTab(2)">
                             <img class="" src="/img/testimonial-2.png" alt="">
                             <button>
                                 <div class="circle">
@@ -108,7 +132,7 @@
                                 </div>
                             </button>
                         </div>
-                        <div class="image-card">
+                        <div :class="[activeTab === 3 ? 'image-card-active' : 'image-card']" @click="handleActiveTab(3)">
                             <img class="" src="/img/testimonial-3.png" alt="">
                             <button>
                                 <div class="circle">
@@ -123,10 +147,8 @@
                                     <p class="hidden lg:block">Watch Video</p>
                                 </div>
                             </button>
-                        </div>
-                  
+                        </div>               
                     </div>
-
                 </div>
             </div>
         </section>
@@ -205,7 +227,32 @@
 import { urls } from "~/assets/urls";
 import type { Testimony } from "~/components/home/testimonies.vue";
 import type { Faq } from "~/components/ui/faq.vue";
-import slider from "~/components/home/slider.vue"
+import slider from "~/components/home/slider.vue";
+import { ref } from 'vue';
+
+let activeTab = ref(1);
+let show = ref(true);
+let show1 = ref(false);
+let show2 = ref(false)
+
+const handleActiveTab = (item:number) => {
+  activeTab.value = (item);
+  if (item === 1) {
+    show.value = true;
+    show1.value = false;
+    show2.value = false;
+  }
+  if (item === 2) {
+    show1.value = true;
+    show.value = false;
+    show2.value = false;
+  }
+  if (item === 3) {
+    show2.value = true;
+    show.value = false;
+    show1.value = false;
+  }
+}
 
 const faqs: Faq[] = [
     {
@@ -238,29 +285,6 @@ const faqs: Faq[] = [
     }
 ]
 
-const testimonies: Testimony[] = [
-    {
-        name: "Femi Ibiwoye",
-        child: "Diamond",
-        text: "This is the testimonial excerpt from the user’s testimonial video to the right. It circles round each highlighted parent.",
-        keyStage: "Key Stage 2",
-        percenatage: 93
-    },
-    {
-        name: "Esther Umoh",
-        child: "Diamond",
-        text: "This is the testimonial excerpt from the user’s testimonial video to the right. It circles round each highlighted parent.",
-        keyStage: "Key Stage 2",
-        percenatage: 93
-    },
-    {
-        name: "Lanre Oshilaja",
-        child: "Diamond",
-        text: "This is the testimonial excerpt from the user’s testimonial video to the right. It circles round each highlighted parent.",
-        keyStage: "A Levels",
-        percenatage: 93
-    },
-];
 </script>
 
 
@@ -282,7 +306,7 @@ const testimonies: Testimony[] = [
     filter: grayscale(100%);
 }
 
-.image-card img:hover{
+.image-card-active{
     filter: grayscale(0%)
 }
 
@@ -297,7 +321,23 @@ const testimonies: Testimony[] = [
     transform: translate(-50%, -50%);
 } 
 
+.image-card-active button{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .image-card button .space{
+    display: flex;
+    gap: 4px;
+    background-color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 1.875rem;
+    min-width: 11rem; 
+}
+
+.image-card-active button .space{
     display: flex;
     gap: 4px;
     background-color: white;
@@ -310,6 +350,16 @@ const testimonies: Testimony[] = [
     width: 1.5rem;
     height: 1.5rem;
     background-color: #D5D5D5;
+    border-radius: 9999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-card-active .space .circle{
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #F7A43F;
     border-radius: 9999px;
     display: flex;
     justify-content: center;

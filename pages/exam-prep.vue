@@ -360,29 +360,7 @@ const faqs: Faq[] = [
   }
 ]
 
-const testimonies: Testimony[] = [
-  {
-    name: "Femi Ibiwoye",
-    child: "Diamond",
-    text: "This is the testimonial excerpt from the user’s testimonial video to the right. It circles round each highlighted parent.",
-    keyStage: "Key Stage 2",
-    percenatage: 93
-  },
-  {
-    name: "Esther Umoh",
-    child: "Diamond",
-    text: "This is the testimonial excerpt from the user’s testimonial video to the right. It circles round each highlighted parent.",
-    keyStage: "Key Stage 2",
-    percenatage: 93
-  },
-  {
-    name: "Lanre Oshilaja",
-    child: "Diamond",
-    text: "This is the testimonial excerpt from the user’s testimonial video to the right. It circles round each highlighted parent.",
-    keyStage: "A Levels",
-    percenatage: 93
-  },
-];
+
 </script>
 
 

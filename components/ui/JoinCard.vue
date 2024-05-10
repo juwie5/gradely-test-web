@@ -9,15 +9,15 @@
                         Gradely to excel</h4>
                     <div class="flex items-center justify-center lg:justify-start gap-6 mt-5 mb-10">
                         <div class="flex justify-start flex-col items-start gap-1">
-                            <p class="uppercase text-[#757575] text-xs lg:text-base  font-medium">Students</p>
+                            <p class="uppercase text-[#757575] text-xs lg:text-base  font-medium">Classes Completed</p>
                             <h6 class="text-[#004680] text-xl lg:text-3xl ">12,881</h6>
                         </div>
                         <div class="flex justify-start flex-col items-start gap-1">
-                            <p class="uppercase text-[#757575] text-xs lg:text-base  font-medium">Teachers</p>
+                            <p class="uppercase text-[#757575] text-xs lg:text-base  font-medium">Video Lessons Completed</p>
                             <h6 class="text-[#004680] text-xl lg:text-3xl">11,938</h6>
                         </div>
                         <div class="flex justify-start flex-col items-start gap-1">
-                            <p class="uppercase text-[#757575] text-xs lg:text-base font-medium">Learning Minutes</p>
+                            <p class="uppercase text-[#757575] text-xs lg:text-base font-medium">Assessment Taken</p>
                              <h6 class="text-[#004680] text-xl lg:text-3xl">686,944</h6>
                         </div>
                     </div>
@@ -28,7 +28,7 @@
                 </div>
                 <div>
                     <NuxtImg src="/img/appScreens.png"
-                        class="block w-full select-none pointer-events-none h-[20rem] lg:w-auto xl:h-auto" />
+                        class="block w-full select-none pointer-events-none h-[20rem] lg:w-auto"/>
                 </div>
             </div>
         </div>

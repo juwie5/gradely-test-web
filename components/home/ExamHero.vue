@@ -2,7 +2,7 @@
     <div class="w-full relative bg-local bg-no-repeat bg-contain bg-[#F5FEF9]"
         style="background-image: url('/img/bgWave.png');">
         <div class="container mt-20">
-            <div class="grid lg:grid-cols-2 w-full">
+            <div class="grid lg:grid-cols-2 items-center w-full">
                 <div class="my-16 lg:mt-24 order-last lg:order-none">
                     <h2
                         class="text-3xl xl:text-[2.5rem] lg:w-full text-[#113255] xl:leading-[65.38px]  tracking-tight font-normal mb-5 text-balance">

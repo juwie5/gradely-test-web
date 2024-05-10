@@ -1,7 +1,10 @@
 <template>
     <section>
         <div v-if="apple" @click="appleAppButton" class="flex items-center justify-center gap-4 rounded-[10px] bg-[#113255] w-[160px] p-1 cursor-pointer">
-            <div>
+            <div v-if="white">
+                <img src="assets/icons/white-appleIcon.svg" alt="">
+            </div>
+            <div v-else>
                 <img src="assets/icons/apple.svg" alt="">
             </div>
             <div class="text-white">
@@ -12,7 +15,10 @@
             </div>
         </div>
         <div v-if="google"  @click="goggleAppButton"class="flex items-center justify-center gap-4 rounded-[10px] bg-[#113255] w-[160px] p-1 cursor-pointer">
-            <div>
+            <div v-if="white">
+                <img src="assets/icons/white-playStore.svg" alt="">
+            </div>
+            <div v-else>
                 <img src="assets/icons/google-play.svg" alt="">
             </div>
             <div class="text-white">
@@ -43,6 +49,7 @@ defineProps({
     apple: Boolean,
     google: Boolean,
     web: Boolean,
+    white: Boolean,
 })
 
 const googleAppButton = () => {

@@ -74,7 +74,7 @@
                         <p class="text-xs text-[#757575]">Per User</p>
                     </div>
                     <div class="text-center mb-5">
-                        <button class="mx-auto bg-[#FCEACF] border border-[#FAA017] py-2 px-16 rounded-[20px] hover:bg-[#FAA017]">
+                        <button class="hidden mx-auto bg-[#FCEACF] border border-[#FAA017] py-2 px-16 rounded-[20px] hover:bg-[#FAA017]">
                             Subscribe Now
                         </button>
                     </div>
@@ -88,7 +88,7 @@
                         <p class="text-xs text-[#757575]">Per User</p>
                     </div>
                     <div class="text-center mb-5">
-                        <button class="mx-auto bg-[#FAA017] border py-2 px-16 rounded-[20px] hover:bg-[#11BDCF]">
+                        <button class="hidden mx-auto bg-[#FAA017] border py-2 px-16 rounded-[20px] hover:bg-[#11BDCF]">
                             Subscribe Now
                         </button>
                     </div>
@@ -102,7 +102,7 @@
                         <p class="text-xs text-[#757575]">Per User</p>
                     </div>
                     <div class="text-center mb-5">
-                        <button class="mx-auto bg-[#FCEACF] border border-[#FAA017] py-2 px-16 rounded-[20px] hover:bg-[#FAA017]">
+                        <button class="hidden mx-auto bg-[#FCEACF] border border-[#FAA017] py-2 px-16 rounded-[20px] hover:bg-[#FAA017]">
                             Subscribe Now
                         </button>
                     </div>
@@ -226,34 +226,27 @@ const faqs: Faq[] = [
 ]
 
 const testimonies: Testimony[] = [
-    {
-        name: "Femi Ibiwoye",
-        child: "Diamond",
-        text: "This is the testimonial excerpt from the user’s testimonial video to the right. It circles round each highlighted parent.",
-        keyStage: "Key Stage 2",
-        percenatage: 93
-    },
-    {
-        name: "Esther Umoh",
-        child: "Diamond",
-        text: "This is the testimonial excerpt from the user’s testimonial video to the right. It circles round each highlighted parent.",
-        keyStage: "Key Stage 2",
-        percenatage: 93
-    },
-    {
-        name: "Lanre Oshilaja",
-        child: "Diamond",
-        text: "This is the testimonial excerpt from the user’s testimonial video to the right. It circles round each highlighted parent.",
-        keyStage: "A Levels",
-        percenatage: 93
-    },
-    {
-        name: "Lanre Oshilaja",
-        child: "Diamond",
-        text: "This is the testimonial excerpt from the user’s testimonial video to the right. It circles round each highlighted parent.",
-        keyStage: "A Levels",
-        percenatage: 93
-    },
+{
+    name: "Femi Ibiwoye",
+    location: "Newport Southwales,UK",
+    text: "Mayokun looks forward to every class with her tutors. I will say she is now more confident in reading big grammars, 100% in English, and 80% in math.",
+    keyStage: "Key Stage 2",
+    percenatage: 93
+  },
+  {
+    name: "Esther Umoh",
+    location: "Newport Southwales,UK",
+    text: "I would say there's been a 50% improvement for both English and math, and the teachers are really great. Their patience with Fikayo's excesses is commendable. I appreciate them",
+    keyStage: "Key Stage 2",
+    percenatage: 93
+  },
+  {
+    name: "Lanre Oshilaja",
+    location: "Lagos, Nigeria",
+    text: "She has improved greatly in Mathematics",
+    keyStage: "A Levels",
+    percenatage: 93
+  }
 ];
 </script>
 

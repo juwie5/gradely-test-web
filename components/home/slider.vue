@@ -20,7 +20,7 @@
         </div>
     </UCarousel>
     <section v-if="isOpen">
-        <div class="fixed top-0 left-0 w-full h-full flex items-center justify-center modal fade">
+        <div @click.self="closeModal" class="fixed top-0 left-0 w-full h-full flex items-center justify-center modal fade">
                 <div class="modal-dialog modal-dialog-centered mediaRenderDialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -202,7 +202,7 @@ const closeModal = (item) => {
 
 /* line 137, ../sass/partials/_dialogs.scss */
 .modal {
-  z-index: 10;
+  z-index: 60;
   background-color: rgba(0, 0, 0, 0.7);
 }
 /* line 140, ../sass/partials/_dialogs.scss */

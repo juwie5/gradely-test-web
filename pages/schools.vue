@@ -1,6 +1,6 @@
 <template>
     <div>
-
+        <h6>schools</h6>
     </div>
 </template>
 

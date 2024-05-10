@@ -36,27 +36,27 @@ const faqs: Faq[] = [
 ]
 
 const testimonies: Testimony[] = [
-  {
+{
     name: "Femi Ibiwoye",
-    child: "Diamond",
-    text: "This is the testimonial excerpt from the user’s testimonial video to the right. It circles round each highlighted parent.",
+    location: "Newport Southwales,UK",
+    text: "Mayokun looks forward to every class with her tutors. I will say she is now more confident in reading big grammars, 100% in English, and 80% in math.",
     keyStage: "Key Stage 2",
     percenatage: 93
   },
   {
     name: "Esther Umoh",
-    child: "Diamond",
-    text: "This is the testimonial excerpt from the user’s testimonial video to the right. It circles round each highlighted parent.",
+    location: "Newport Southwales,UK",
+    text: "I would say there's been a 50% improvement for both English and math, and the teachers are really great. Their patience with Fikayo's excesses is commendable. I appreciate them",
     keyStage: "Key Stage 2",
     percenatage: 93
   },
   {
     name: "Lanre Oshilaja",
-    child: "Diamond",
-    text: "This is the testimonial excerpt from the user’s testimonial video to the right. It circles round each highlighted parent.",
+    location: "Lagos, Nigeria",
+    text: "She has improved greatly in Mathematics",
     keyStage: "A Levels",
     percenatage: 93
-  },
+  }
 ];
 </script>
 
@@ -154,7 +154,7 @@ const testimonies: Testimony[] = [
         </div>
       </div>
     </div>
-    <!-- <div class="container my-16">
+     <div class="container my-16">
       <div class="text-center">
         <h3 class="text-2xl mb-4 font-semibold text-[#113255]">
           What parents say about Gradely Tutoring
@@ -163,7 +163,7 @@ const testimonies: Testimony[] = [
       <HomeTestimonies
         :testimonies="testimonies"
       />
-    </div> -->
+    </div>
     <div class="container my-16">
       <h2 class="text-3xl mb-5 text-center font-semibold text-[#113255] tracking-tighter">
         Frequently Asked Questions

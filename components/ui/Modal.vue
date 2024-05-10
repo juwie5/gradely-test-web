@@ -1,5 +1,5 @@
 <template>
-    <section v-if="isOpen" class="fixed top-0 left-0 w-full h-full flex items-center justify-center z-40 modal">
+    <section v-if="isOpen"  @click.self="$emit('close')" class="fixed top-0 left-0 w-full h-full flex items-center justify-center z-40 modal">
         <section class="bg-white p-10 rounded-2xl relative">
           <div @click="$emit('close')" class="absolute top-4 right-4 cursor-pointer"> 
             <img src="@/assets/icons/Close_dialog.svg" alt="">
@@ -15,15 +15,18 @@
                     <input type="text" class="form-control px-4 py-2 border border-[#D5D5D5] rounded-[5px] w-96 placeholder:text-sm" name="name" id="name" placeholder="Your Fullname">
                 </div>
                 <div class="textOnInput">
-                    <label for="name" class="text-xs font-bold text-[#353535]">Email / Phone <span class="text-[10px] text-[#959595] uppercase font-normal">Optional</span></label>
+                    <label for="email" class="text-xs font-bold text-[#353535]">Email / Phone <span class="text-[10px] text-[#959595] uppercase font-normal">Optional</span></label>
                     <input type="text" class="form-control px-4 py-2 border border-[#D5D5D5] rounded-[5px] w-96 placeholder:text-sm" name="email" id="email" placeholder="Email / Phone">
                 </div>
                 <div class="textOnInput">
-                    <label for="name" class="text-xs font-bold text-[#353535]">Class</label>
-                    <input type="text" class="form-control px-4 py-2 border border-[#D5D5D5] rounded-[5px] w-96" name="name" id="class">
+                    <label for="class" class="text-xs font-bold text-[#353535]">Class</label>
+                    <select name="class" id="class" class="form-control px-4 py-2 border border-[#D5D5D5] rounded-[5px] w-96">
+                        <option disabled selected class="text-sm">Select your current class</option>
+                        <option v-for="{id, description} in allClasses" :key="id" :value="id">{{ description }}</option>
+                    </select>
                 </div>
                 <div class="textOnInput">
-                    <label for="name" class="text-xs font-bold text-[#353535]">Password</label>
+                    <label for="password" class="text-xs font-bold text-[#353535]">Password</label>
                     <input type="password" class="form-control px-4 py-2 border border-[#D5D5D5] rounded-[5px] w-96 placeholder:text-sm" name="name" id="password" placeholder="Enter your password">
                 </div>
            </div>
@@ -40,7 +43,8 @@
 </template>
 
 <script setup>
-import {ref} from 'vue'
+import {ref} from 'vue';
+import { allClasses } from "~/assets/classes";
 
 defineProps({
     isOpen: Boolean

@@ -1,6 +1,6 @@
 <template>
-  <div class="w-full flex gap-5 custom-scrollbar overflow-x-auto">
-    <div v-for="({ name, child, text, percenatage, keyStage }, index) in testimonies" :key="index"
+  <div class="w-full flex lg:justify-center gap-5 custom-scrollbar overflow-x-auto">
+    <div v-for="({ name, location, text, percenatage, keyStage }, index) in testimonies" :key="index"
       class="w-72 flex-shrink-0 aspect-[37/42] border border-gray-200 bg-white mb-5 p-5 lg:p-7 rounded-lg flex flex-col justify-between">
       <div>
         <div class="flex gap-5 items-center">
@@ -9,7 +9,7 @@
             <h5 class="text-lg font-semibold">
               {{ name }}
             </h5>
-            <small class="text-sm text-gray-600 block">Father of {{ child }}</small>
+            <small class="text-sm text-gray-600 block"> {{ location }}</small>
           </div>
         </div>
         <div class="my-4">
@@ -33,7 +33,7 @@
 <script setup lang="ts">
 export interface Testimony {
   name: string;
-  child: string;
+  location: string;
   text: string;
   keyStage: string;
   percenatage: number;
