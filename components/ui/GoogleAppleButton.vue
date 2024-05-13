@@ -1,6 +1,6 @@
 <template>
     <section>
-        <div v-if="apple" @click="appleAppButton" class="flex items-center justify-center gap-4 rounded-[10px] bg-[#113255] w-[160px] p-1 cursor-pointer">
+        <NuxtLink :to="urls.apple_store" v-if="apple"  class="flex items-center justify-center gap-4 rounded-[10px] bg-[#113255] w-[160px] p-1 cursor-pointer">
             <div v-if="white">
                 <img src="assets/icons/white-appleIcon.svg" alt="">
             </div>
@@ -13,8 +13,8 @@
                     <h4 class="font-medium" style="font-size:17px">App Store</h4>
                 </div>
             </div>
-        </div>
-        <div v-if="google"  @click="goggleAppButton"class="flex items-center justify-center gap-4 rounded-[10px] bg-[#113255] w-[160px] p-1 cursor-pointer">
+        </NuxtLink>
+        <NuxtLink  :to="urls.play_store" v-if="google"   @click="googleAppButton" class="flex items-center justify-center gap-4 rounded-[10px] bg-[#113255] w-[160px] p-1 cursor-pointer">
             <div v-if="white">
                 <img src="assets/icons/white-playStore.svg" alt="">
             </div>
@@ -27,8 +27,8 @@
                     <h4 class="font-medium" style="font-size:17px">Google Play</h4>
                 </div>
             </div>
-        </div>
-        <div v-if="web" class="hidden lg:flex items-center justify-center gap-4 rounded-[10px] bg-[#113255] w-[160px] p-1 ">
+        </NuxtLink>
+        <NuxtLink v-if="web" class="hidden lg:flex items-center justify-center gap-4 rounded-[10px] bg-[#113255] w-[160px] p-1 ">
             <div>
                 <img src="assets/icons/world.svg" alt="">
             </div>
@@ -38,7 +38,7 @@
                     <h4 class="font-medium" style="font-size:17px">Web browser</h4>
                 </div>
             </div>
-        </div>
+        </NuxtLink>
     </section>
 </template>
 

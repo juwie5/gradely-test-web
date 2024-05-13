@@ -20,7 +20,7 @@
               Home
             </NuxtLink>
             <NuxtLink
-              :to="urls.about"
+             
               class="block text-[#555555] hover:text-[#FAA017] text-nowrap"
             >
               About Gradely
@@ -31,18 +31,6 @@
             >
               Blog
             </NuxtLink>
-            <NuxtLink
-              :to="urls.teacher"
-              class="block text-[#555555] hover:text-[#FAA017] text-nowrap"
-            >
-              Become a Tutor
-            </NuxtLink>
-            <NuxtLink
-              :to="urls.download_apps"
-              class="block text-[#555555] hover:text-[#FAA017] text-nowrap cursor-pointer"
-            >
-              Download Apps
-            </NuxtLink>
           </div>
         </div>
       </div>
@@ -52,14 +40,14 @@
         </h3>
         <div class="space-y-5">
           <NuxtLink
-            :to="urls.for_schools"
+           
             class="block text-[#555555] hover:text-[#FAA017] text-nowrap"
           >
             For Schools
           </NuxtLink>
           <NuxtLink
-            :to="urls.schools"
-            class="block text-[#555555] hover:text-[#FAA017] text-nowrap"
+            :to="urls.parents"
+            class="block text-[#555555] hover:text-[#FAA017] text-nowrap cursor-pointer"
           >
             For Parents
           </NuxtLink>
@@ -70,10 +58,16 @@
             Tutoring
           </NuxtLink>
           <NuxtLink
-            :to="urls.parents"
+            :to="urls.exams"
             class="block text-[#555555] hover:text-[#FAA017] text-nowrap cursor-pointer"
           >
-            Learn
+            Exam Prep
+          </NuxtLink>
+          <NuxtLink
+            :to="urls.coding"
+            class="block text-[#555555] hover:text-[#FAA017] text-nowrap cursor-pointer"
+          >
+            Coding
           </NuxtLink>
         </div>
       </div>
@@ -83,25 +77,25 @@
         </h3>
         <div class="space-y-5">
           <NuxtLink
-            :to="urls.contact_us"
+            
             class="block text-[#555555] hover:text-[#FAA017] text-nowrap"
           >
             Contact Us
           </NuxtLink>
           <NuxtLink
-            :to="urls.help_center"
+            
             class="block text-[#555555] hover:text-[#FAA017] text-nowrap"
           >
             Help Center
           </NuxtLink>
           <NuxtLink
-            :to="urls.privacy"
+            
             class="block text-[#555555] hover:text-[#FAA017] text-nowrap"
           >
             Privacy
           </NuxtLink>
           <NuxtLink
-            :to="urls.tac"
+            
             class="block text-[#555555] hover:text-[#FAA017] text-nowrap cursor-pointer"
           >
             Terms &amp; Conditons
@@ -220,7 +214,7 @@
                 class="text-2xl"
               />
             </NuxtLink>
-          </div>
+        </div>
       </div>
     </div>
     <div class="bg-[#004680]">
@@ -266,7 +260,7 @@
               Home
             </NuxtLink>
             <NuxtLink
-              :to="urls.about"
+             
               class="block hover:text-[#004680] text-nowrap"
             >
               About Gradely
@@ -277,18 +271,7 @@
             >
               Blog
             </NuxtLink>
-            <NuxtLink
-              :to="urls.teacher"
-              class="block hover:text-[#004680] text-nowrap"
-            >
-              Become a Tutor
-            </NuxtLink>
-            <NuxtLink
-              :to="urls.download_apps"
-              class="block hover:text-[#004680] text-nowrap"
-            >
-              Download Apps
-            </NuxtLink>
+
           </div>
         </div>
       <div class="shrink px-3  lg:py-10">
@@ -300,13 +283,13 @@
         </div>
         <div class="space-y-5 mt-4 transition-all duration-300 delay-150" v-if="show1">
           <NuxtLink
-            :to="urls.schools"
+         
             class="block hover:text-[#004680] text-nowrap"
           >
             For Schools
           </NuxtLink>
           <NuxtLink
-            :to="urls.for_parents"
+            :to="urls.parents"
             class="block hover:text-[#004680] text-nowrap"
           >
             For Parents
@@ -318,10 +301,16 @@
             Tutoring
           </NuxtLink>
           <NuxtLink
-            :to="urls.parents"
+            :to="urls.exams"
             class="block hover:text-[#004680] text-nowrap"
           >
-            Learn
+            Exam Prep
+          </NuxtLink>
+          <NuxtLink
+            :to="urls.coding"
+            class="block text-[#555555] hover:text-[#FAA017] text-nowrap cursor-pointer"
+          >
+            Coding
           </NuxtLink>
         </div>
       </div>
@@ -334,25 +323,25 @@
         </div>
         <div class="space-y-5 mt-4 transition-all duration-300 delay-150" v-if="show2">
           <NuxtLink
-            :to="urls.contact_us"
+          
             class="block hover:text-[#004680] text-nowrap"
           >
             Contact Us
           </NuxtLink>
           <NuxtLink
-            :to="urls.help_center"
+           
             class="block hover:text-[#004680] text-nowrap"
           >
             Help Center
           </NuxtLink>
           <NuxtLink
-            :to="urls.privacy"
+            
             class="block hover:text-[#004680] text-nowrap"
           >
             Privacy
           </NuxtLink>
           <NuxtLink
-            :to="urls.tac"
+            
             class="block hover:text-[#004680] text-nowrap"
           >
             Terms &amp; Conditons

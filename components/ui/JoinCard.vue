@@ -1,8 +1,8 @@
 <template>
     <section class="container lg:block mx-auto lg:w-9/12 bg-[url('/img/bg-pattern.svg')] rounded-[30px] mb-16">
         <div class="px-1 pt-10">
-            <div class="flex flex-col xl:flex-row items-end gap-8">
-                <div class="p-4 lg:pb-10">
+            <div class="flex flex-col xl:flex-row items-end lg:items-center justify-center gap-8">
+                <div class="p-4 lg:pb-10 xl:w-[39.688rem] ">
                     <h4
                         class="text-2xl lg:text-[34px] lg:leading-10 text-center lg:text-left font-medium text-[#113255] my-2">
                         Join thousands of great <br></br> learners using

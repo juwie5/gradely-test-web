@@ -183,7 +183,7 @@
                 </div>
             </div>
         </section>
-       <UiJoinCard/>
+        <UiJoinCard/>
         <HomeFooter />
     </main>
 </template>
