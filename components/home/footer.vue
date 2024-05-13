@@ -1,5 +1,5 @@
 <template>
-   <footer class="hidden lg:block w-full bg-[#DBF5F8] text-base lg:text-sm">
+  <footer class="hidden lg:block w-full bg-[#DBF5F8] text-base lg:text-sm">
     <div class="container text-center lg:text-left w-full grid grid-cols-1 lg:flex gap-3 xl:gap-12 pb-3 lg:pb-0 text-gray-700">
       <div class="flex flex-col lg:flex-row shrink px-3 py-5 lg:py-10 gap-5">
         <div class="w-10 h-10 mx-auto mt-5 lg:mt-0 lg:mx-0">
@@ -20,7 +20,7 @@
               Home
             </NuxtLink>
             <NuxtLink
-              :to="urls.about_gradely"
+              :to="urls.about"
               class="block text-[#555555] hover:text-[#FAA017] text-nowrap"
             >
               About Gradely
@@ -32,7 +32,7 @@
               Blog
             </NuxtLink>
             <NuxtLink
-              :to="urls.become_a_tutor"
+              :to="urls.teacher"
               class="block text-[#555555] hover:text-[#FAA017] text-nowrap"
             >
               Become a Tutor
@@ -58,7 +58,7 @@
             For Schools
           </NuxtLink>
           <NuxtLink
-            :to="urls.for_parents"
+            :to="urls.schools"
             class="block text-[#555555] hover:text-[#FAA017] text-nowrap"
           >
             For Parents
@@ -70,7 +70,7 @@
             Tutoring
           </NuxtLink>
           <NuxtLink
-            :to="urls.learn"
+            :to="urls.parents"
             class="block text-[#555555] hover:text-[#FAA017] text-nowrap cursor-pointer"
           >
             Learn
@@ -266,7 +266,7 @@
               Home
             </NuxtLink>
             <NuxtLink
-              :to="urls.about_gradely"
+              :to="urls.about"
               class="block hover:text-[#004680] text-nowrap"
             >
               About Gradely
@@ -278,7 +278,7 @@
               Blog
             </NuxtLink>
             <NuxtLink
-              :to="urls.become_a_tutor"
+              :to="urls.teacher"
               class="block hover:text-[#004680] text-nowrap"
             >
               Become a Tutor
@@ -300,7 +300,7 @@
         </div>
         <div class="space-y-5 mt-4 transition-all duration-300 delay-150" v-if="show1">
           <NuxtLink
-            :to="urls.for_schools"
+            :to="urls.schools"
             class="block hover:text-[#004680] text-nowrap"
           >
             For Schools
@@ -318,7 +318,7 @@
             Tutoring
           </NuxtLink>
           <NuxtLink
-            :to="urls.learn"
+            :to="urls.parents"
             class="block hover:text-[#004680] text-nowrap"
           >
             Learn

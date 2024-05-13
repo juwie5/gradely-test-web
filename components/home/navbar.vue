@@ -32,10 +32,10 @@
             </li>
           </div>
         </div>
-        <NuxtLink :to="urls.schools"
+        <!-- <NuxtLink :to="urls.schools"
           class="text-[#757575] text-sm font-bold cursor-pointer py-2.5 px-[18px] hover:bg-[#DBF5F8] hover:rounded-[25px] hover:text-[#113255] w-1/2">
           Schools
-        </NuxtLink>
+        </NuxtLink> -->
         <NuxtLink :to="urls.teacher"
           class="text-[#757575] text-sm font-bold cursor-pointer hover:bg-[#DBF5F8] py-2.5 px-[18px] hover:rounded-[25px] hover:text-[#113255] w-1/2">
           Teachers
@@ -46,19 +46,18 @@
             <NuxtIcon name="arrow-down-line" class="pt-1" />
           </NuxtLink>
           <div class="dropdown-content">
-            <li  class="flex flex-col">
+            <!-- <li  class="flex flex-col">
               <NuxtLink :to="urls.about" class="text-[#113255] text-sm font-medium">About Us</NuxtLink>
               <NuxtLink :to="urls.about" class="text-xs font-light text-[#757575]">Learn more about us, our Mission & Vision</NuxtLink>
-            </li>
+            </li> -->
             <li  class="flex flex-col">
               <NuxtLink :to="urls.blog"  target="_blank" class="text-[#113255] text-sm font-medium">Blog</NuxtLink>
               <NuxtLink :to="urls.blog"  target="_blank" class="text-xs font-light text-[#757575]">Read about latest trends in education</NuxtLink>
             </li>
-            <li  class="flex flex-col">
+            <!-- <li  class="flex flex-col">
               <NuxtLink :to="urls.help" class="text-[#113255] text-sm font-medium">Help Center</NuxtLink>
               <NuxtLink :to="urls.help"  class="text-xs font-light text-[#757575]">Find help on how to use Gradely</NuxtLink>
-            </li>
-
+            </li> -->
           </div>
         </div>
       </div>
@@ -171,7 +170,6 @@
       </div>
     </div>
   </nav>
-
 </template>
 
 <script setup>

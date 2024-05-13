@@ -75,7 +75,7 @@
         </div>
       </div>
     </section>
-    <section class="container my-16">
+    <!-- <section class="container my-16">
       <h4 class="text-xl lg:text-3xl mb-2 text-center lg:mt-0 font-bold tracking-tight text-[#113255]">
         Benefits & Pricing
       </h4>
@@ -177,7 +177,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <section class="container my-16">
       <div class="text-center">
         <h4

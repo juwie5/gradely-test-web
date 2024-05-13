@@ -41,22 +41,25 @@ const testimonies: Testimony[] = [
     location: "Newport Southwales,UK",
     text: "Mayokun looks forward to every class with her tutors. I will say she is now more confident in reading big grammars, 100% in English, and 80% in math.",
     keyStage: "Key Stage 2",
-    percenatage: 93
+    percenatage: 93,
+    image: "/img/testimony-1.png"
   },
   {
     name: "Esther Umoh",
     location: "Newport Southwales,UK",
     text: "I would say there's been a 50% improvement for both English and math, and the teachers are really great. Their patience with Fikayo's excesses is commendable. I appreciate them",
     keyStage: "Key Stage 2",
-    percenatage: 93
+    percenatage: 93,
+    image: "/img/testimony-2.png"
   },
   {
     name: "Lanre Oshilaja",
     location: "Lagos, Nigeria",
     text: "She has improved greatly in Mathematics",
     keyStage: "A Levels",
-    percenatage: 93
-  }
+    percenatage: 93,
+    image: "/img/testimony-3.png"
+  } 
 ];
 </script>
 
