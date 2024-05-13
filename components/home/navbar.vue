@@ -32,10 +32,10 @@
             </li>
           </div>
         </div>
-        <NuxtLink :to="urls.schools"
+        <!-- <NuxtLink :to="urls.schools"
           class="text-[#757575] text-sm font-bold cursor-pointer py-2.5 px-[18px] hover:bg-[#DBF5F8] hover:rounded-[25px] hover:text-[#113255] w-1/2">
           Schools
-        </NuxtLink>
+        </NuxtLink> -->
         <NuxtLink :to="urls.teacher"
           class="text-[#757575] text-sm font-bold cursor-pointer hover:bg-[#DBF5F8] py-2.5 px-[18px] hover:rounded-[25px] hover:text-[#113255] w-1/2">
           Teachers

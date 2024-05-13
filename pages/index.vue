@@ -163,7 +163,7 @@ const faqs: Faq[] = [
 
 const testimonies: Testimony[] = [
 {
-    name: "Femi Ibiwoye",
+    name: "Mayorkun",
     location: "Newport Southwales,UK",
     text: "Mayokun looks forward to every class with her tutors. I will say she is now more confident in reading big grammars, 100% in English, and 80% in math.",
     keyStage: "Key Stage 2",
@@ -171,7 +171,7 @@ const testimonies: Testimony[] = [
     image: "/img/testimony-1.png"
   },
   {
-    name: "Esther Umoh",
+    name: "Esther",
     location: "Newport Southwales,UK",
     text: "I would say there's been a 50% improvement for both English and math, and the teachers are really great. Their patience with Fikayo's excesses is commendable. I appreciate them",
     keyStage: "Key Stage 2",
@@ -179,7 +179,7 @@ const testimonies: Testimony[] = [
     image: "/img/testimony-2.png"
   },
   {
-    name: "Lanre Oshilaja",
+    name: "Joy",
     location: "Lagos, Nigeria",
     text: "She has improved greatly in Mathematics",
     keyStage: "A Levels",

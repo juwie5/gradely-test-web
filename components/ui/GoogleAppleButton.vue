@@ -1,6 +1,6 @@
 <template>
     <section>
-        <NuxtLink :to="urls.apple_store" v-if="apple"  class="flex items-center justify-center gap-4 rounded-[10px] bg-[#113255] w-[160px] p-1 cursor-pointer">
+        <NuxtLink :to="urls.apple_store" target="_blank" v-if="apple"  class="flex items-center justify-center gap-4 rounded-[10px] bg-[#113255] w-[160px] p-1 cursor-pointer">
             <div v-if="white">
                 <img src="assets/icons/white-appleIcon.svg" alt="">
             </div>
@@ -14,7 +14,7 @@
                 </div>
             </div>
         </NuxtLink>
-        <NuxtLink  :to="urls.play_store" v-if="google"   @click="googleAppButton" class="flex items-center justify-center gap-4 rounded-[10px] bg-[#113255] w-[160px] p-1 cursor-pointer">
+        <NuxtLink  :to="urls.play_store" target="_blank" v-if="google"   @click="googleAppButton" class="flex items-center justify-center gap-4 rounded-[10px] bg-[#113255] w-[160px] p-1 cursor-pointer">
             <div v-if="white">
                 <img src="assets/icons/white-playStore.svg" alt="">
             </div>
